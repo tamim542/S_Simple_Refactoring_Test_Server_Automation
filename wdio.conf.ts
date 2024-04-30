@@ -30,7 +30,102 @@ export const config: Options.Testrunner = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.ts'
+      
+
+
+
+        // './test/specs/**/Registration.ts',
+        // './test/specs/**/EmailVerificationProfileSet.ts',
+        // './test/specs/**/SignIn.ts',
+        // './test/specs/**/IinnerCountry_LabelPurchase.ts',
+        './test/specs/**/A_SingleDomesticCanadaPost.ts',
+        './test/specs/**/A_SingleDomesticGLS.ts',
+        './test/specs/**/A_SingleDomesticLoomis.ts',
+        './test/specs/**/A_SingleDomesticLoomisAPI.ts',
+        './test/specs/**/A_SingleDomesticPurolator.ts',
+        // './test/specs/**/B_SDResidentialCanadaPost.ts',
+        // './test/specs/**/B_SDResidentialGLS.ts',
+        // './test/specs/**/B_SDResidentialLoomis.ts',
+        // './test/specs/**/B_SDResidentialLoomisAPI.ts',
+        // './test/specs/**/B_SDResidentialPurolator.ts',
+        // './test/specs/**/C_SDInsuranceCanadaPost.ts',
+        // './test/specs/**/C_SDInsuranceGLS.ts',
+        // './test/specs/**/C_SDInsuranceLoomis.ts',
+        // './test/specs/**/C_SDInsuranceLoomisAPI.ts',
+        // './test/specs/**/C_SDInsurancePurolator.ts',
+        // './test/specs/**/D_SDSignatureCanadaPost.ts',
+        // './test/specs/**/D_SDSignatureGLS.ts',
+        // './test/specs/**/D_SDSignatureLoomis.ts',
+        // './test/specs/**/D_SDSignatureLoomisAPI.ts',
+        // './test/specs/**/D_SDSignaturePurolator.ts',
+        // './test/specs/**/E_MPDomesticCanadaPost.ts',
+        // './test/specs/**/E_MPDomesticGLS.ts',
+        // './test/specs/**/E_MPDomesticLoomis.ts',
+        // './test/specs/**/E_MPDomesticLoomisAPI.ts',
+        // './test/specs/**/E_MPDomesticPurolator.ts',
+        //  './test/specs/**/F_InternationalSingleParcel.ts',
+        //  './test/specs/**/F_InternationalSingleDocument.ts',
+        //  './test/specs/**/F_InternationalInsuranceDefault.ts',
+        // './test/specs/**/F_InternationalMultiPackage.ts',
+        //   './test/specs/**/G_QuickQuoteDomestic1.ts',
+        //  './test/specs/**/G_QuickQuoteDomestic2.ts',
+        //  './test/specs/**/G_QuickQuoteDHL.ts',
+        //   './test/specs/**/H_PickUpDropCanadaPost.ts',
+        //   './test/specs/**/H_PickUpDropGLS.ts',
+        //   './test/specs/**/H_PickUpDropLoomis.ts',
+        //   './test/specs/**/H_PickUpDropLoomisAPI.ts',
+        //   './test/specs/**/H_PickUpDropPurolator.ts',
+        //   './test/specs/**/H_PickUpDropDHL.ts',
+        //   './test/specs/**/NotShowGLSCourier.ts',
+        //  './test/specs/**/QuickQuoteLabelPurchase.ts',
+        // './test/specs/**/TrackandManage.ts',
+        // './test/specs/**/SigninNegative.ts',
+
+
+        //--------------------------For Mobile screen file -------------------------
+
+
+        // './test/specs/**/MA_SignIn.ts',
+        // './test/specs/**/MA_SingleDomesticCanadaPost.ts',
+        //  './test/specs/**/MA_SingleDomesticGLS.ts',
+        // './test/specs/**/MA_SingleDomesticLoomis.ts',
+        // './test/specs/**/MA_SingleDomesticLoomisAPI.ts',
+        // './test/specs/**/MA_SingleDomesticPurolator.ts',
+        //  './test/specs/**/MB_SDResidentialCanadaPost.ts',
+        // './test/specs/**/MB_SDResidentialGLS.ts',
+        // './test/specs/**/MB_SDResidentialLoomis.ts',
+        // './test/specs/**/MB_SDResidentialLoomisAPI.ts',
+        // './test/specs/**/MB_SDResidentialPurolator.ts',
+        // './test/specs/**/MC_SDInsuranceCanadaPost.ts',
+        // './test/specs/**/MC_SDInsuranceGLS.ts',
+        // './test/specs/**/MC_SDInsuranceLoomis.ts',
+        // './test/specs/**/MC_SDInsuranceLoomisAPI.ts',
+        // './test/specs/**/MC_SDInsurancePurolator.ts',
+        // './test/specs/**/MD_SDSignatureCanadaPost.ts',
+        // './test/specs/**/MD_SDSignatureGLS.ts',
+        // './test/specs/**/MD_SDSignatureLoomis.ts',
+        // './test/specs/**/MD_SDSignatureLoomisAPI.ts',
+        // './test/specs/**/MD_SDSignaturePurolator.ts',
+        // './test/specs/**/ME_MPDomesticCanadaPost.ts',
+        // './test/specs/**/ME_MPDomesticGLS.ts',
+        // './test/specs/**/ME_MPDomesticLoomis.ts',
+        // './test/specs/**/ME_MPDomesticLoomisAPI.ts',
+        // './test/specs/**/ME_MPDomesticPurolator.ts',
+        //  './test/specs/**/MF_InternationalSingleParcel.ts',
+        //  './test/specs/**/MF_InternationalSingleDocument.ts',
+        //  './test/specs/**/MF_InternationalInsuranceDefault.ts',
+        // './test/specs/**/MF_InternationalMultiPackage.ts',
+        //  './test/specs/**/MG_QuickQuoteLoomis.ts',
+        //  './test/specs/**/MG_QuickQuoteDomestic1.ts',
+        //  './test/specs/**/MG_QuickQuoteDHL.ts',
+        //   './test/specs/**/MH_PickUpDropCanadaPost.ts',
+        //   './test/specs/**/MH_PickUpDropGLS.ts',
+        //   './test/specs/**/MH_PickUpDropLoomis.ts',
+        //   './test/specs/**/MH_PickUpDropLoomisAPI.ts',
+        //   './test/specs/**/MH_PickUpDropPurolator.ts',
+
+
+
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,7 +147,7 @@ export const config: Options.Testrunner = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
