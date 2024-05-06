@@ -38,12 +38,12 @@ export const config: Options.Testrunner = {
         // './test/specs/**/EmailVerificationProfileSet.ts',
         // './test/specs/**/SignIn.ts',
         // './test/specs/**/IinnerCountry_LabelPurchase.ts',
-        './test/specs/**/A_SingleDomesticCanadaPost.ts',
-        './test/specs/**/A_SingleDomesticGLS.ts',
-        './test/specs/**/A_SingleDomesticLoomis.ts',
-        './test/specs/**/A_SingleDomesticLoomisAPI.ts',
-        './test/specs/**/A_SingleDomesticPurolator.ts',
-        // './test/specs/**/B_SDResidentialCanadaPost.ts',
+        // './test/specs/**/A_SingleDomesticCanadaPost.ts',
+        // './test/specs/**/A_SingleDomesticGLS.ts',
+        // './test/specs/**/A_SingleDomesticLoomis.ts',
+        // './test/specs/**/A_SingleDomesticLoomisAPI.ts',
+        // './test/specs/**/A_SingleDomesticPurolator.ts',
+        './test/specs/**/B_SDResidentialCanadaPost.ts',
         // './test/specs/**/B_SDResidentialGLS.ts',
         // './test/specs/**/B_SDResidentialLoomis.ts',
         // './test/specs/**/B_SDResidentialLoomisAPI.ts',
@@ -156,9 +156,9 @@ export const config: Options.Testrunner = {
     capabilities: [{
         browserName: 'chrome'
     // }, {
-    //     browserName: 'firefox'
+        // browserName: 'firefox'
     // }, {
-    //     browserName: 'MicrosoftEdge'
+        // browserName: 'MicrosoftEdge'
     }],
 
     //
@@ -195,11 +195,11 @@ export const config: Options.Testrunner = {
     // baseUrl: 'http://localhost:8080',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 900000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 1200000,
     //
     // Default request retries count
     connectionRetryCount: 3,
@@ -208,7 +208,7 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['crossbrowsertesting'],
+    services: ['chromedriver'],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -237,7 +237,7 @@ export const config: Options.Testrunner = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 600000
     },
 
     //

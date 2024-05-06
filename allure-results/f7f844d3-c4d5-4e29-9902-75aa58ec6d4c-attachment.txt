@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "(//td[@class='font-bold text-black loomis_api'])[1]"
+}

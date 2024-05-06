@@ -6,7 +6,8 @@ describe('Loomis Courier Label Purchase Single Domestic', () => {
     const lPLC = new SingleDomesticLoomis();
     const utilities = new Utilities();
  
-    let loomis;
+   // let loomis;
+   let loomis: string ;
 
 
     it('OPen the app', async () => {
@@ -52,21 +53,23 @@ describe('Loomis Courier Label Purchase Single Domestic', () => {
 
 
     it('From Select Loomis Single Domestic', async () => {
-
-        await browser.pause(7000);
+        console.log("================================================================  loomis");
+        // await browser.pause(7000);
 
        
 
 
-        if (expect(lPLC.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        // if (expect(lPLC.seeMoreCourierButton).toHaveValueContaining('View More')) {
 
-            await lPLC.seeMoreCourierButton.click();
+        //     await lPLC.seeMoreCourierButton.click();
 
-        }
+        // }
 
-        const loomisClass = await $("(//td[@class='loomis_api'])[1]");
+        // const loomisClass = await $("(//td[@class='loomis_api'])[1]");
+       
         
-        loomis = await loomisClass.getAttribute('class');
+        loomis = await lPLC.loomisClass.getAttribute('class');
+        
          
        if(loomis=="loomis_api"){  
 

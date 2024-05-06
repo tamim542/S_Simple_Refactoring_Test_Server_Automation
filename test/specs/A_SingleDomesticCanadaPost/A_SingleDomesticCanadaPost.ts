@@ -7,7 +7,9 @@ describe('Canadapost Xpresspost Courier Single Domestic', () => {
     const lPCC = new SingleDomesticCanadaPost();
     const utilities = new Utilities();
 
-    let aa;
+    // let aa;
+    // var aa:string[] = []
+    let aa: string ;
 
     it('Open the app', async () => {
         await browser.url(utilities.Signin_URL);
@@ -58,8 +60,9 @@ describe('Canadapost Xpresspost Courier Single Domestic', () => {
 
     it('From Select Canadapost Single Domestic', async () => {
 
-        await browser.pause(10000);
+        // await browser.pause(10000);
 
+        await lPCC.courierButtonNextAllCourier.scrollIntoView();
         if (expect(lPCC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await lPCC.seeMoreCourierButton.click();

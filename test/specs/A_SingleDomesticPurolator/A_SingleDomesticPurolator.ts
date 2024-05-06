@@ -7,7 +7,8 @@ describe('Purolator Courier Label Purchase Single Domestic', () => {
     const lPPC = new SingleDomesticPurolator();
     const utilities = new Utilities();
     
-    let purolatorCourier;
+    // let purolatorCourier;
+    let purolatorCourier: string ;
 
 
     it('OPen the app', async () => {
@@ -47,7 +48,11 @@ describe('Purolator Courier Label Purchase Single Domestic', () => {
     it('Lets Build Your Shipment Purolator Single Domestic', async () => {
 
 
+       
         await utilities.LetsBuildYourShipment();
+
+        
+
         await browser.pause(7000);
 
 
@@ -57,19 +62,23 @@ describe('Purolator Courier Label Purchase Single Domestic', () => {
 
 
     it('From Select Purolator Single Domestic', async () => {
+        // const next = await $("(//span[contains(text(),'Next')])[1]");
+        // await next.click();
 
-        await browser.pause(10000);
+        // await browser.pause(10000);
 
-        if (expect(lPPC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
+        // if (expect(lPPC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
-            await lPPC.seeMoreCourierButton.click();
+        //     await lPPC.seeMoreCourierButton.click();
 
-        }
+        // }
 
         const purolatorClass = await $("(//td[@class='purolator_p'])[1]");
         
         purolatorCourier = await purolatorClass.getAttribute('class');
-         
+
+
+       
 
         if (purolatorCourier == "purolator_p") {
 

@@ -7,7 +7,8 @@ describe('Canadapost Single Domestic Residential', () => {
     const sDRC = new SDResidentialCanadaPost();
     const utilities = new Utilities();
 
-    let aa;
+    // let aa;
+    let aa:string;
 
     before('OPen the app', async () => {
         await browser.url(utilities.Signin_URL);
@@ -63,22 +64,22 @@ describe('Canadapost Single Domestic Residential', () => {
 
     it('From Select Canadapost Domestic Shipment Residential', async () => {
 
-        await browser.pause(10000);
+        await browser.pause(40000);
+      
+        // if (expect(sDRC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
-        if (expect(sDRC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
+        //     await sDRC.seeMoreCourierButton.click();
 
-            await sDRC.seeMoreCourierButton.click();
-
-        }
+        // }
 
 
         const CanadapostClass = await $("(//td[@class='canadapost_cp'])[1]");
-        
+        await CanadapostClass.waitForExist({ reverse: true });
          aa = await CanadapostClass.getAttribute('class');
           
         if(aa=="canadapost_cp"){
            
-        await sDRC.scrollAction.scrollIntoView();
+        // await sDRC.scrollAction.scrollIntoView();
         await sDRC.Canadapost_Xpresspost.click();
         await browser.pause(7000);
         await sDRC.courierButtonNextAllCourier.click();

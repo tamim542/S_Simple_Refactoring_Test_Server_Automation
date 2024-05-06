@@ -437,6 +437,11 @@ get ConfirmSignup(){
 //------------------------ courirer --------------------------
 
 
+  get loomisClass(){
+    return $("(//td[@class='loomis_api'])[1]"); ////div[contains(text(),'Action')]
+  } // (//button[@class='Button_primary_button__psbZE Button_btn__zvUAT Button_btn__zvUAT'])[1]
+
+
   get scrollAction(){
     return $("//h1[contains(text(),'Select A Courier')]"); ////div[contains(text(),'Action')]
   } // (//button[@class='Button_primary_button__psbZE Button_btn__zvUAT Button_btn__zvUAT'])[1]
