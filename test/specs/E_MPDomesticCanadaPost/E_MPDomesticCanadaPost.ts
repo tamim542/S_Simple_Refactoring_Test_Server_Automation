@@ -7,7 +7,7 @@ describe('Canadapost Multi-Package Domestic', () => {
     const mPDC = new MPDomesticCanadaPost();
     const utilities = new Utilities();
 
-    let aa;
+    let aa:string;
 
     before('OPen the app', async () => {
         await browser.url(utilities.Signin_URL);
@@ -60,9 +60,9 @@ describe('Canadapost Multi-Package Domestic', () => {
 
     it('From Select Canadapost Multi-Package Domestic', async () => {
 
-        await browser.pause(10000);
-
-        if (expect(mPDC.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        // await browser.pause(10000);
+        await mPDC.seeMoreCourierButton.waitForExist();
+        if (expect(mPDC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await mPDC.seeMoreCourierButton.click();
 

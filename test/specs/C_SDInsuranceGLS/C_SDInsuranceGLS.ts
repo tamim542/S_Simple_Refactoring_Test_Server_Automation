@@ -7,7 +7,7 @@ describe('GLS Single Domestic Insurance', () => {
     const sDIG = new SDINsuranceGLS();
     const utilities = new Utilities();
 
-    let GLS;
+    let GLS:string;
 
 
     before('OPen the app', async () => {
@@ -55,9 +55,9 @@ describe('GLS Single Domestic Insurance', () => {
 
     it('From Select GLS Single Domestic Insurance', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
-        
+        await sDIG.seeMoreCourierButton.waitForExist();
         if (expect(sDIG.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDIG.seeMoreCourierButton.click();

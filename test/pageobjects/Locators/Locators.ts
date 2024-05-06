@@ -437,9 +437,9 @@ get ConfirmSignup(){
 //------------------------ courirer --------------------------
 
 
-  get loomisClass(){
-    return $("(//td[@class='loomis_api'])[1]"); ////div[contains(text(),'Action')]
-  } // (//button[@class='Button_primary_button__psbZE Button_btn__zvUAT Button_btn__zvUAT'])[1]
+  // get loomisClass(){
+  //   return $("(//td[@class='loomis_api'])[1]"); 
+  // } 
 
 
   get scrollAction(){
@@ -461,7 +461,9 @@ get ConfirmSignup(){
 
   get courierName() {
     return $("//span[@id='courierName']");
+ 
   }
+ 
 
 
 
@@ -490,12 +492,12 @@ get ConfirmSignup(){
     return $("//button[@class='group flex items-center justify-center p-0.5 text-center relative focus:z-10 focus:outline-none bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg focus:ring-2 my-3 mr-10 sm:mr-0']");
   }
 
-  get confirmInformationAllCourier() {
-    return $("//input[@id='confirm']");
+  get i_confirm() {
+    return $("//label[contains(text(),'I confirm the information entered is complete and accurate.')]");
   }
   get labelPurchaseButtonAllCourier() {
     return $("//span[contains(text(),'Purchase Label')]");
-  }
+  }//
 
   get downloadLabelAllCourier() {
     return $("//span[contains(text(),'Download')]");

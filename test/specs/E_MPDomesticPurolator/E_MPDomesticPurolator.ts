@@ -7,7 +7,7 @@ describe('Purolator Multi-Package Domestic', () => {
     const mPDP = new MPDomesticPurolator();
     const utilities = new Utilities();
     
-    let purolatorCourier;
+    let purolatorCourier:string;
 
 
     it('OPen the app', async () => {
@@ -55,9 +55,10 @@ describe('Purolator Multi-Package Domestic', () => {
 
     it('From Select Purolator Multi-Package Domestic', async () => {
 
-        await browser.pause(10000);
+        // await browser.pause(10000);
 
-        if (expect(mPDP.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        await mPDP.seeMoreCourierButton.waitForExist();
+        if (expect(mPDP.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await mPDP.seeMoreCourierButton.click();
 

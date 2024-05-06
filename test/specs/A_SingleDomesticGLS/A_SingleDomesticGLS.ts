@@ -7,7 +7,8 @@ describe('GLS Courier Label Purchase Single Domestic', () => {
     const lPGC = new SingleDomesticGLS();
     const utilities = new Utilities();
 
-    let GLS;
+    // let GLS;
+    let GLS: string ;
 
 
     before('OPen the app', async () => {
@@ -57,14 +58,17 @@ describe('GLS Courier Label Purchase Single Domestic', () => {
 
         await browser.pause(7000);
 
-        console.log("GLS===========ertertetwr======");
+      
         
                 // await lPGC.scrollLoadMore.scrollIntoView();
-                // if (expect(lPGC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
+
+                await  lPGC.seeMoreCourierButton.waitForExist();
+                if (expect(lPGC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
         
-                //     await lPGC.seeMoreCourierButton.click();
+                    await lPGC.seeMoreCourierButton.click();
         
-                // }
+                }
+
                
                 const GLSId = await $("(//td[@class='gls'])[1]");
                 

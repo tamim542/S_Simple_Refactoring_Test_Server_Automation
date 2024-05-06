@@ -117,6 +117,9 @@ describe('Purolator Courier Label Purchase Single Domestic', () => {
             console.log("     ------------------ "+"Courier Name: "+CourierName+" --------------\n");
             console.log("==========================================================================\n");
 
+            await utilities.ReviewConfirm();
+
+
         }else{
             console.log("\n=======================================================================================\n");
             console.log("----------------------------"+"Purolator Courier Not Found "+"------------------------------\n");
@@ -124,7 +127,8 @@ describe('Purolator Courier Label Purchase Single Domestic', () => {
             return;
 
         }
-        await utilities.ReviewConfirm();
+
+        // await utilities.ReviewConfirm();
 
 
     })

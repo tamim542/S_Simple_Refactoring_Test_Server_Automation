@@ -62,7 +62,8 @@ describe('Canadapost Xpresspost Courier Single Domestic', () => {
 
         // await browser.pause(10000);
 
-        await lPCC.courierButtonNextAllCourier.scrollIntoView();
+        // await lPCC.courierButtonNextAllCourier.scrollIntoView();
+        await  lPCC.seeMoreCourierButton.waitForExist();
         if (expect(lPCC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await lPCC.seeMoreCourierButton.click();
@@ -77,6 +78,7 @@ describe('Canadapost Xpresspost Courier Single Domestic', () => {
         if(aa=="canadapost_cp"){
 
         await lPCC.scrollAction.scrollIntoView();
+        await lPCC.Canadapost_Xpresspost.waitForClickable();
         await lPCC.Canadapost_Xpresspost.click();
         await browser.takeScreenshot();
         await browser.pause(7000);

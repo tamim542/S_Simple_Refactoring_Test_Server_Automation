@@ -7,7 +7,7 @@ describe('Canadapost Single Domestic Signature', () => {
     const sDSC = new SDSignatureCanadaPost();
     const utilities = new Utilities();
 
-    let aa;
+    let aa:string;
 
     before('OPen the app', async () => {
         await browser.url(utilities.Signin_URL);
@@ -63,8 +63,9 @@ describe('Canadapost Single Domestic Signature', () => {
 
     it('From Select Canadapost Single Domestic Signature', async () => {
 
-        await browser.pause(10000);
+        // await browser.pause(10000);
 
+        await sDSC.seeMoreCourierButton.waitForExist();
         if (expect(sDSC.seeMoreCourierButton).toHaveValueContaining('View More')) {
 
             await sDSC.seeMoreCourierButton.click();

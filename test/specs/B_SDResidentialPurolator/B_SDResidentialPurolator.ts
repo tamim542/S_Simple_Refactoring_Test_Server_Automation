@@ -7,7 +7,7 @@ describe('Purolator Domestic Shipment Residential', () => {
     const sDRP = new SDResidentialPurolator();
     const utilities = new Utilities();
     
-    let purolatorCourier;
+    let purolatorCourier:string;
 
 
     before('OPen the app', async () => {
@@ -61,6 +61,7 @@ describe('Purolator Domestic Shipment Residential', () => {
 
         await browser.pause(10000);
 
+        await sDRP.seeMoreCourierButton.waitForExist();
         if (expect(sDRP.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDRP.seeMoreCourierButton.click();

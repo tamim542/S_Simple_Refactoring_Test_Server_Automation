@@ -6,7 +6,7 @@ describe('Loomis API Single Domestic Insurance', () => {
     const sDILA = new SDInsuranceLoomisAPI();
     const utilities = new Utilities();
  
-    let loomisAPIClassValue;
+    let loomisAPIClassValue:string;
 
 
     before('OPen the app', async () => {
@@ -53,11 +53,11 @@ describe('Loomis API Single Domestic Insurance', () => {
 
     it('From Select Loomis API Courier', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
        
 
-
+        await sDILA.seeMoreCourierButton.waitForExist();
         if (expect(sDILA.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDILA.seeMoreCourierButton.click();

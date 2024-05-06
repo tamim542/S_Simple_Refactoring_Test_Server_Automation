@@ -6,7 +6,7 @@ describe('Loomis API Domestic Shipment Residential', () => {
     const sDRLA = new SDResidentialLoomisAPI();
     const utilities = new Utilities();
  
-    let loomisAPIClassValue;
+    let loomisAPIClassValue:string;
 
 
     before('OPen the app', async () => {
@@ -53,11 +53,11 @@ describe('Loomis API Domestic Shipment Residential', () => {
 
     it('From Select Loomis API Domestic Shipment Residential', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
        
 
-
+        await sDRLA.seeMoreCourierButton.waitForExist();
         if (expect(sDRLA.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDRLA.seeMoreCourierButton.click();

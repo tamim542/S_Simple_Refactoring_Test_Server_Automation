@@ -6,7 +6,7 @@ describe('Loomis API Single Domestic Signature', () => {
     const sDSL = new SDSignatureLoomisAPI();
     const utilities = new Utilities();
  
-    let loomisAPIClassValue;
+    let loomisAPIClassValue:string;
 
 
     before('OPen the app', async () => {
@@ -53,12 +53,12 @@ describe('Loomis API Single Domestic Signature', () => {
 
     it('From Select Loomis API Single Domestic Signature', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
        
 
-
-        if (expect(sDSL.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        await sDSL.seeMoreCourierButton.waitForExist();
+        if (expect(sDSL.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDSL.seeMoreCourierButton.click();
 

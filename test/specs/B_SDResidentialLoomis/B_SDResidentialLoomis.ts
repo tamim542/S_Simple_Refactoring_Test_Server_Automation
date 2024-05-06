@@ -6,7 +6,8 @@ describe('Loomis Domestic Shipment Residential', () => {
     const sDRL = new SDResidentialLoomis();
     const utilities = new Utilities();
  
-    let loomis;
+    // let loomis;
+    let loomis: string ;
 
 
     before('OPen the app', async () => {
@@ -53,11 +54,11 @@ describe('Loomis Domestic Shipment Residential', () => {
 
     it('From Select Loomis Domestic Shipment Residential', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
        
 
-
+        await sDRL.seeMoreCourierButton.waitForExist();
         if (expect(sDRL.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDRL.seeMoreCourierButton.click();

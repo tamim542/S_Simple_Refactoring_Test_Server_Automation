@@ -7,7 +7,7 @@ describe('Purolator Single Domestic Insurance', () => {
     const sDIP = new SDInsurancePurolator();
     const utilities = new Utilities();
     
-    let purolatorCourier;
+    let purolatorCourier:string;
 
 
     before('OPen the app', async () => {
@@ -58,8 +58,8 @@ describe('Purolator Single Domestic Insurance', () => {
 
     it('From Select Purolator  Single Domestic Insurance', async () => {
 
-        await browser.pause(10000);
-
+        // await browser.pause(10000);
+        await sDIP.seeMoreCourierButton.waitForExist();
         if (expect(sDIP.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDIP.seeMoreCourierButton.click();

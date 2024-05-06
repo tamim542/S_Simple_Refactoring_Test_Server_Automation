@@ -43,7 +43,7 @@ export const config: Options.Testrunner = {
         // './test/specs/**/A_SingleDomesticLoomis.ts',
         // './test/specs/**/A_SingleDomesticLoomisAPI.ts',
         // './test/specs/**/A_SingleDomesticPurolator.ts',
-        './test/specs/**/B_SDResidentialCanadaPost.ts',
+        // './test/specs/**/B_SDResidentialCanadaPost.ts',
         // './test/specs/**/B_SDResidentialGLS.ts',
         // './test/specs/**/B_SDResidentialLoomis.ts',
         // './test/specs/**/B_SDResidentialLoomisAPI.ts',
@@ -58,11 +58,11 @@ export const config: Options.Testrunner = {
         // './test/specs/**/D_SDSignatureLoomis.ts',
         // './test/specs/**/D_SDSignatureLoomisAPI.ts',
         // './test/specs/**/D_SDSignaturePurolator.ts',
-        // './test/specs/**/E_MPDomesticCanadaPost.ts',
-        // './test/specs/**/E_MPDomesticGLS.ts',
+        './test/specs/**/E_MPDomesticCanadaPost.ts',
+        './test/specs/**/E_MPDomesticGLS.ts',
         // './test/specs/**/E_MPDomesticLoomis.ts',
-        // './test/specs/**/E_MPDomesticLoomisAPI.ts',
-        // './test/specs/**/E_MPDomesticPurolator.ts',
+        './test/specs/**/E_MPDomesticLoomisAPI.ts',
+        './test/specs/**/E_MPDomesticPurolator.ts',
         //  './test/specs/**/F_InternationalSingleParcel.ts',
         //  './test/specs/**/F_InternationalSingleDocument.ts',
         //  './test/specs/**/F_InternationalInsuranceDefault.ts',
@@ -168,7 +168,7 @@ export const config: Options.Testrunner = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'error',
     //
     // Set specific log levels per logger
     // loggers:
@@ -195,11 +195,11 @@ export const config: Options.Testrunner = {
     // baseUrl: 'http://localhost:8080',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 900000,
+    waitforTimeout: 90000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
-    connectionRetryTimeout: 1200000,
+    connectionRetryTimeout: 90000,
     //
     // Default request retries count
     connectionRetryCount: 3,
@@ -237,7 +237,7 @@ export const config: Options.Testrunner = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 600000
+        timeout: 100000
     },
 
     //

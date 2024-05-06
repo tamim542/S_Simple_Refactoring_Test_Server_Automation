@@ -53,22 +53,22 @@ describe('Loomis Courier Label Purchase Single Domestic', () => {
 
 
     it('From Select Loomis Single Domestic', async () => {
-        console.log("================================================================  loomis");
+      
         // await browser.pause(7000);
 
        
 
+        await  lPLC.seeMoreCourierButton.waitForExist();
+        if (expect(lPLC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
-        // if (expect(lPLC.seeMoreCourierButton).toHaveValueContaining('View More')) {
+            await lPLC.seeMoreCourierButton.click();
 
-        //     await lPLC.seeMoreCourierButton.click();
+        }
 
-        // }
-
-        // const loomisClass = await $("(//td[@class='loomis_api'])[1]");
+        const loomisClass = await $("(//td[@class='loomis_api'])[1]");
        
         
-        loomis = await lPLC.loomisClass.getAttribute('class');
+        loomis = await loomisClass.getAttribute('class');
         
          
        if(loomis=="loomis_api"){  
@@ -96,7 +96,7 @@ describe('Loomis Courier Label Purchase Single Domestic', () => {
 
     it('Review & Confirm Loomis Single Domestic', async () => {
 
-        if(expect(lPLC.courierName).toHaveText("Loomis Express")){
+        if(expect(lPLC.courierName).toHaveText("Loomis")){
             const CourierName = await lPLC.courierName.getText();
             console.log("\n==========================================================================\n");
             console.log("   -------------- "+"Courier Name: "+CourierName+" --------------\n");
@@ -119,7 +119,7 @@ describe('Loomis Courier Label Purchase Single Domestic', () => {
 
         await browser.pause(5000);
        
-        if(loomis=="loomisexpress"){
+        if(loomis=="loomis_api"){
 
             await utilities.LabelPrintDownload();
         }else{

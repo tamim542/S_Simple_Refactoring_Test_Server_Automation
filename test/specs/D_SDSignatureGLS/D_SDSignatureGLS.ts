@@ -7,7 +7,7 @@ describe('GLS Single Domestic Signature', () => {
     const sDSG = new SDSignatureGLS();
     const utilities = new Utilities();
 
-    let GLS;
+    let GLS:string;
 
 
     before('OPen the app', async () => {
@@ -57,8 +57,8 @@ describe('GLS Single Domestic Signature', () => {
 
         await browser.pause(7000);
 
-        // await sDSG.scrollAction.scrollIntoView();
-        if (expect(sDSG.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        await sDSG.seeMoreCourierButton.waitForExist();
+        if (expect(sDSG.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDSG.seeMoreCourierButton.click();
 

@@ -64,17 +64,18 @@ describe('Canadapost Single Domestic Residential', () => {
 
     it('From Select Canadapost Domestic Shipment Residential', async () => {
 
-        await browser.pause(40000);
+        // await browser.pause(40000);
       
-        // if (expect(sDRC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
+        await sDRC.seeMoreCourierButton.waitForExist();
+        if (expect(sDRC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
-        //     await sDRC.seeMoreCourierButton.click();
+            await sDRC.seeMoreCourierButton.click();
 
-        // }
+        }
 
 
         const CanadapostClass = await $("(//td[@class='canadapost_cp'])[1]");
-        await CanadapostClass.waitForExist({ reverse: true });
+        
          aa = await CanadapostClass.getAttribute('class');
           
         if(aa=="canadapost_cp"){

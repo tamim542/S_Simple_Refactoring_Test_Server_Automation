@@ -6,7 +6,7 @@ describe('Loomis API Multi-Package Domestic', () => {
     const mPDLA = new MPDomesticLoomisAPI();
     const utilities = new Utilities();
  
-    let loomisAPIClassValue;
+    let loomisAPIClassValue:string;
 
 
     before('OPen the app', async () => {
@@ -53,12 +53,12 @@ describe('Loomis API Multi-Package Domestic', () => {
 
     it('From Select Loomis API Multi-Package Domestic', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
        
 
-
-        if (expect(mPDLA.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        await mPDLA.seeMoreCourierButton.waitForExist();
+        if (expect(mPDLA.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await mPDLA.seeMoreCourierButton.click();
 

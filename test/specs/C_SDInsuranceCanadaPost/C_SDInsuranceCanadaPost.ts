@@ -7,7 +7,7 @@ describe('Canadapost Single Domestic Insurance', () => {
     const sDIC = new SDInsuranceCanadaPost();
     const utilities = new Utilities();
 
-    let aa;
+    let aa:string;
 
     before('OPen the app', async () => {
         await browser.url(utilities.Signin_URL);
@@ -63,8 +63,9 @@ describe('Canadapost Single Domestic Insurance', () => {
 
     it('From Select Canadapost Single Domestic Insurance', async () => {
 
-        await browser.pause(10000);
+        // await browser.pause(10000);
 
+        await sDIC.seeMoreCourierButton.waitForExist();
         if (expect(sDIC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDIC.seeMoreCourierButton.click();

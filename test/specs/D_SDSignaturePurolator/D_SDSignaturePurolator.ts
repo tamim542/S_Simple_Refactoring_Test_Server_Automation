@@ -7,7 +7,7 @@ describe('Purolator Single Domestic Signature', () => {
     const sDSP = new SDSignaturePurolator();
     const utilities = new Utilities();
     
-    let purolatorCourier;
+    let purolatorCourier:string;
 
 
     before('OPen the app', async () => {
@@ -58,9 +58,10 @@ describe('Purolator Single Domestic Signature', () => {
 
     it('From Select Purolator Single Domestic Signature', async () => {
 
-        await browser.pause(10000);
+        // await browser.pause(10000);
 
-        if (expect(sDSP.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        await sDSP.seeMoreCourierButton.waitForExist();
+        if (expect(sDSP.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDSP.seeMoreCourierButton.click();
 

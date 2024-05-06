@@ -7,7 +7,7 @@ describe('GLS Multi-Package Domestic', () => {
     const mPDG = new MPDomesticGLS();
     const utilities = new Utilities();
 
-    let GLS;
+    let GLS:string;
 
 
     before('OPen the app', async () => {
@@ -53,10 +53,10 @@ describe('GLS Multi-Package Domestic', () => {
 
     it('From Select GLS Multi-Package Domestic', async () => {
 
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
-       // await mPDG.scrollAction.scrollIntoView();
-        if (expect(mPDG.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        await mPDG.seeMoreCourierButton.waitForExist();
+        if (expect(mPDG.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await mPDG.seeMoreCourierButton.click();
 

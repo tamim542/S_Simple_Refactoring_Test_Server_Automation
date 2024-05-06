@@ -7,7 +7,8 @@ describe('GLS Domestic Shipment Residential', () => {
     const sDRG = new SDResidentialGLS();
     const utilities = new Utilities();
 
-    let GLSClassValue;
+    // let GLSClassValue;
+    let GLSClassValue: string ;
 
 
     before('OPen the app', async () => {
@@ -57,7 +58,8 @@ describe('GLS Domestic Shipment Residential', () => {
 
         await browser.pause(7000);
 
-        await sDRG.scrollAction.scrollIntoView();
+        // await sDRG.scrollAction.scrollIntoView();
+        await sDRG.seeMoreCourierButton.waitForExist();
         if (expect(sDRG.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDRG.seeMoreCourierButton.click();
