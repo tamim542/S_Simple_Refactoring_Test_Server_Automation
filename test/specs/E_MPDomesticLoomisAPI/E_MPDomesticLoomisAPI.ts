@@ -30,6 +30,7 @@ describe('Loomis API Multi-Package Domestic', () => {
     it('Destination Address Loomis API Multi-Package Domestic', async () => {
 
 
+        await utilities.OriginAddress();
         await utilities.Destination();
        
         // await utilities.SuggestEnterAddress();

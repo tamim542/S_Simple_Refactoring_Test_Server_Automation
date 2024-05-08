@@ -32,7 +32,7 @@ describe('GLS Multi-Package Domestic', () => {
     it('Destination Address GLS Multi-Package Domestic', async () => {
 
 
-
+        await utilities.OriginAddress();
         await utilities.Destination();
 
     })

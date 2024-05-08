@@ -144,7 +144,7 @@ class Utilities {
 
         const rW = new LabelPurchaseByAllCourierUtilities();
 
-        console.log("===============================review and confirm===========================");
+        
         await  rW.i_confirm.waitForExist();
         await rW.i_confirm.click();
         await rW.i_confirm.click();

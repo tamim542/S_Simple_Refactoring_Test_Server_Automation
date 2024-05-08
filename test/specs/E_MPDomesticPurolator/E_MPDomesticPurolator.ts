@@ -33,6 +33,7 @@ describe('Purolator Multi-Package Domestic', () => {
 
     it('Destination Address Purolator Multi-Package Domestic', async () => {
 
+        await utilities.OriginAddress();
         await utilities.Destination();
         await browser.pause(2000);
 
@@ -45,7 +46,7 @@ describe('Purolator Multi-Package Domestic', () => {
 
 
         await utilities.LetsBuildYourShipmentWithMultiPackage();
-        await browser.pause(7000);
+        // await browser.pause(7000);
 
 
     })
@@ -149,7 +150,7 @@ describe('Purolator Multi-Package Domestic', () => {
         await browser.takeScreenshot();
         await browser.pause(2000);
         console.log("\n=======================================================================================\n");
-        console.log("----------------------------"+" Label print and Download Done Domestic signature"+"------------------------------\n");
+        console.log("---------------------"+" Label print and Download Done Multiple Package Domestic: Loomis"+"------------------\n");
         console.log("=======================================================================================\n");
     
    

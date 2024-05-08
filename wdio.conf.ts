@@ -58,7 +58,7 @@ export const config: Options.Testrunner = {
         // './test/specs/**/D_SDSignatureLoomis.ts',
         // './test/specs/**/D_SDSignatureLoomisAPI.ts',
         // './test/specs/**/D_SDSignaturePurolator.ts',
-        './test/specs/**/E_MPDomesticCanadaPost.ts',
+        // './test/specs/**/E_MPDomesticCanadaPost.ts',
         './test/specs/**/E_MPDomesticGLS.ts',
         // './test/specs/**/E_MPDomesticLoomis.ts',
         './test/specs/**/E_MPDomesticLoomisAPI.ts',
