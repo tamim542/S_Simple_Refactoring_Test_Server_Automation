@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//td[@class=\"purolator_p\"])[5]"
-}

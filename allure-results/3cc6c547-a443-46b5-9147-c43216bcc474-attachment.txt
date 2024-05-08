@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"(//li[@class=\"p-2 cursor-pointer hover:bg-gray-100 text-black text-sm\"])[1]\"}\n  (Session info: chrome=124.0.6367.119)",
-  "stacktrace": "\tGetHandleVerifier [0x00007FF6B4721502+60802]\n\t(No symbol) [0x00007FF6B469AC02]\n\t(No symbol) [0x00007FF6B4557CE4]\n\t(No symbol) [0x00007FF6B45A6D4D]\n\t(No symbol) [0x00007FF6B45A6E1C]\n\t(No symbol) [0x00007FF6B45ECE37]\n\t(No symbol) [0x00007FF6B45CABBF]\n\t(No symbol) [0x00007FF6B45EA224]\n\t(No symbol) [0x00007FF6B45CA923]\n\t(No symbol) [0x00007FF6B4598FEC]\n\t(No symbol) [0x00007FF6B4599C21]\n\tGetHandleVerifier [0x00007FF6B4A2411D+3217821]\n\tGetHandleVerifier [0x00007FF6B4A660B7+3488055]\n\tGetHandleVerifier [0x00007FF6B4A5F03F+3459263]\n\tGetHandleVerifier [0x00007FF6B47DB846+823494]\n\t(No symbol) [0x00007FF6B46A5F9F]\n\t(No symbol) [0x00007FF6B46A0EC4]\n\t(No symbol) [0x00007FF6B46A1052]\n\t(No symbol) [0x00007FF6B46918A4]\n\tBaseThreadInitThunk [0x00007FF86B7D7344+20]\n\tRtlUserThreadStart [0x00007FF86BAA26B1+33]\n"
-}

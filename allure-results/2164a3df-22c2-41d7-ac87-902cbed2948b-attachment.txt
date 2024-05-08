@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//input[@class='block w-full border disabled:cursor-not-allowed disabled:opacity-50 p-2.5 text-sm rounded-lg'])[1]"
-}

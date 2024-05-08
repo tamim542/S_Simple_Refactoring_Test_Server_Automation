@@ -103,7 +103,7 @@ get ConfirmSignup(){
     return $('//input[@id="street1"]');
   }
   get selectStreetDestination() {
-    return $('(//li[@class="p-2 cursor-pointer hover:bg-gray-100 text-black text-sm"])[1]');
+    return $('(//li[@class="p-2 cursor-pointer hover:bg-gray-100 text-black text-sm flex justify-between"])[1]');
   }
   get unitNumberDestination() {
     return $('//input[@name="street2"]');

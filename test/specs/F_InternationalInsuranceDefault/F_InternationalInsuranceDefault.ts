@@ -18,9 +18,11 @@ describe('International Insurance Default', () => {
 
     //--------------------------------- Destination Address International Insurance Default -------------------------
 
-    it('Destination Address International Insurance Default', async () => {
+    it('Origin Destination Address International Insurance Default', async () => {
 
+        await utilities.OriginAddress();
 
+        await iID.destinationAddressManual.click();
 
         await iID.firstNameDestination.setValue("Tamim");
         await iID.lastNameDestination.setValue("Buiyan");
@@ -29,12 +31,12 @@ describe('International Insurance Default', () => {
         const valueCounty = await iID.selectCountryDestination.getValue();
 
 
-        await iID.selectCountryDestination.selectByIndex(2);
-        await iID.clickSelectStreetDestination.setValue("4900 Bow St");
-        await browser.pause(7000);
+        await iID.selectCountryDestination.selectByIndex(5);
+        await iID.clickSelectStreetDestination.setValue("3 Austral Ave"); //4900 Bow St
+        // await browser.pause(7000);
 
-        await iID.selectStreetDestination.click();
-        await browser.pause(4000);
+        // await iID.selectStreetDestination.click();
+        // await browser.pause(4000);
 
         await iID.unitNumberDestination.setValue("40");
         await iID.phoneNumberDestination.setValue("4079472341");
