@@ -336,7 +336,7 @@ get ConfirmSignup(){
 
 
 
-  //--------------------------------Let's Build Your Commercial Invoice --------------------------
+  //--------------------------------Let's Build Your Commercial Invoice for international shipment--------------------------
 
 
   get package() {
@@ -345,44 +345,51 @@ get ConfirmSignup(){
   get selcetShipmentPurpose() {
     return $("//select[@name='how_hear']");
   }
+  get selectWhoWillPay() {
+    return $('//select[@id="duties_taxes"]');
+  }
+
   get itemDescription() {
-    return $("//input[@id='document_description']");
+    return $("//input[@id='description']");
   }
   get quantity() {
-    return $("(//input[@type='number'])[1]");
+    return $("//input[@placeholder='Quantity']");
   }
 
   get selectPackage() {
-    return $("//select[@id='packaging']");
+    return $("//select[@id='parcels.0.parcel_items.0.packaging']");
   }
   get weightItem() {
     return $("//input[@id='weight']");
   }
   get valueItem() {
-    return $("//input[@name='package_value']");
+    return $("//input[@name='parcels.0.parcel_items.0.value']");
   }
   get selectUnits() {
     return $("//select[@id='units']");
   }
   get countryForMade() {
-    return $('//button[@class="ReactFlagsSelect-module_selectBtn__19wW7"]');
+    return $('//button[@class="ReactFlagsSelect-module_selectBtn__19wW7 itemMadeFlagButton"]');
   }
   get clickCountry() {
     return $("//span[contains(text(),'Belgium')]");
   }
   get HSCode() {
-    return $('(//input[@name="package_value"])[2]');
-  }
-  get nextButtonForItem() {
-    return $('(//span[@class="text-md font-bold"])[2]');
+    return $('//input[@placeholder="HS/Commodity Code"]');
   }
 
-
-  get selectWhoWillPay() {
-    return $('//select[@id="duties_taxes"]');
+  get invoiceNumberCheck() {
+    return $('//input[@id="includeInvoice"]');
   }
+  get invoiceNumber() {
+    return $('//input[@id="invoice_number"]');
+  }
+  get additionalInvoiceInformation() {
+    return $('//textarea[@id="comment"]');
+  }
+
   get nextButtonForShip() {
-    return $('(//span[@class="text-md font-bold"])[2]');
+    return $('(//span[@class="flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2"])[3]');
   }
   get nextButtonForShipConfirm() {
     return $('(//span[@class="text-md font-bold"])[2]');
@@ -404,10 +411,10 @@ get ConfirmSignup(){
   //--------------------------------Select DHL Courier --------------------------
 
   get DHLCLick() {
-    return $('(//span[@class="Table_checkmark__nJ9HK"])[1]');
+    return $('(//span[@class="RateTable_checkmark__T6kfB dhl_api"])[1]');
   }
   get DHLNextButton() {
-    return $('(//button[@class="Button_primary_button__psbZE Button_btn__zvUAT Button_btn__zvUAT"])[2]');
+    return $('(//span[@class="flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2"])[4]');
   }
 
 

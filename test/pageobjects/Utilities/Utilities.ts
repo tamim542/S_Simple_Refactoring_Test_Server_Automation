@@ -168,6 +168,7 @@ class Utilities {
         // await lPD.downloadLabel.getActiveElement();
         // await lPD.purolator_Xpresspost.waitForDisplayed();
         await browser.pause(2000);
+        await lPD.downloadLabel.waitForExist();
         await lPD.downloadLabel.click();
         await browser.takeScreenshot();
         await browser.pause(2000);
@@ -384,6 +385,8 @@ class Utilities {
 
         const dAISD = new LabelPurchaseByAllCourierUtilities();
 
+        await dAISD.destinationAddressManual.click();
+
         await dAISD.firstNameDestination.setValue("Tamim");
         await dAISD.lastNameDestination.setValue("Buiyan");
         await dAISD.companyNameDestination.setValue("Ship Simple");
@@ -392,7 +395,7 @@ class Utilities {
 
 
         await dAISD.selectCountryDestination.selectByIndex(2);
-        await dAISD.clickSelectStreetDestination.setValue("4900 Bow St");
+        await dAISD.clickSelectStreetDestination.setValue("14761 Franklin Ave");
         await browser.pause(7000);
 
         await dAISD.selectStreetDestination.click();

@@ -22,42 +22,7 @@ describe('International Insurance Default', () => {
 
         await utilities.OriginAddress();
 
-        await iID.destinationAddressManual.click();
-
-        await iID.firstNameDestination.setValue("Tamim");
-        await iID.lastNameDestination.setValue("Buiyan");
-        await iID.companyNameDestination.setValue("Ship Simple");
-
-        const valueCounty = await iID.selectCountryDestination.getValue();
-
-
-        await iID.selectCountryDestination.selectByIndex(5);
-        await iID.clickSelectStreetDestination.setValue("3 Austral Ave"); //4900 Bow St
-        // await browser.pause(7000);
-
-        // await iID.selectStreetDestination.click();
-        // await browser.pause(4000);
-
-        await iID.unitNumberDestination.setValue("40");
-        await iID.phoneNumberDestination.setValue("4079472341");
-        await iID.emailDestination.setValue("tamim@yopmail.com");
-        await iID.orderDestination.setValue("13111");
-        await iID.invoiceDestination.setValue("13111");
-        await iID.residenceAddresDestination.click();
-
-        await browser.pause(5000);
-        await iID.nextButtonDestination.click();
-        await browser.pause(4000);
-
-        //--------------------------------- suggest adress click -------------------------
-
-        // if (expect(iID.suggestedAddressClickForDHL).toHaveValueContaining('Use Entered Address')) {
-
-        //     await iID.suggestedAddressClickForDHL.click();
-
-        // }
-
-        // await browser.pause(7000);
+        await utilities.DestinationAddressInternationalSingleDocument();
 
 
 
@@ -72,65 +37,42 @@ describe('International Insurance Default', () => {
     it('Lets Build Your Commercial Invoice International Insurance Default', async () => {
 
         await iID.package.click();
-        await iID.selcetShipmentPurpose.selectByIndex(5);
-
-
-        await iID.itemDescription.setValue("For Testing Purpose");
-        await iID.quantity.setValue("3");
-        await iID.selectPackage.selectByIndex(3);
-        await iID.weightItem.setValue("20");
-        await iID.valueItem.setValue("30");
-        await browser.pause(7000);
-        await iID.selectUnits.selectByIndex(10);
-        await browser.pause(3000);
-        await iID.countryForMade.click();
-        await iID.clickCountry.click();
-
-        await iID.HSCode.click();
-        await iID.HSCode.setValue("220");
-        await browser.pause(7000);
-        await iID.nextButtonForItem.click();
-        await browser.pause(7000);
-    })
-
-
-    it('Lets Build Your Commercial Invoice select Who WillPay International Insurance Default', async () => {
-
+        await iID.selcetShipmentPurpose.selectByIndex(4);
         await iID.selectWhoWillPay.selectByIndex(2);
-        await iID.nextButtonForShip.click();
-        await browser.pause(3000);
-    })
-
-    it('Lets Build Your Commercial Invoice Next International Insurance Default', async () => {
-
-
-        await iID.nextButtonForShipConfirm.click();
-        await browser.pause(5000);
-
-    })
-
-
-  //  --------------------------------- Enter Value of percel International Insurance Default-------------------------
-
-
-    it('Enter Value of percel International Insurance Default', async () => {
 
         await iID.lengthPercel.setValue("12");
         await iID.widthPercel.setValue("6");
         await iID.heightPercel.setValue("10");
         await iID.weightPercel.setValue("60");
         await iID.weightMeasurePercel.click();
-        // await iID.shipmentProtection.click();
-        await iID.valueOfShipmentProtection.setValue("100");
-        await iID.nextButtonBuilderShipment.click();
-        await browser.pause(5000);
 
+        
+        await iID.quantity.setValue("3");
+        await iID.selectPackage.selectByIndex(3);
+        await iID.itemDescription.setValue("For Testing Purpose");
+        await iID.weightItem.setValue("20");
+        await iID.valueItem.setValue("30");
+        await iID.countryForMade.click();
+        await iID.clickCountry.click();
+        await browser.pause(2000);
 
+        await iID.HSCode.click();
+        await iID.HSCode.setValue("220");
+        // await iID.selectUnits.selectByIndex(10);
 
+        await iID.invoiceNumberCheck.click();
+        await iID.invoiceNumber.setValue("20");
+        await iID.additionalInvoiceInformation.setValue("Only for Testing");
 
+        await browser.pause(2000);
+        await iID.nextButtonForShip.click();
+
+       
+        
     })
 
 
+   
 
 
     //--------------------------------- Select DHL Courier International Insurance Default-------------------------
@@ -138,10 +80,10 @@ describe('International Insurance Default', () => {
 
     it('Select DHL courier', async () => {
 
-        await browser.pause(7000);
+        await iID.DHLCLick.waitForExist();
         await iID.DHLCLick.click();
         await iID.DHLNextButton.click();
-        await browser.pause(7000);
+        await browser.pause(2000);
 
 
 
@@ -153,9 +95,9 @@ describe('International Insurance Default', () => {
     
     it('Review & Confirm DHL Courier International Insurance Default', async () => {
 
-        await iID.confirmInformation.click();
-        await iID.labelPurchaseButton.click();
-        await browser.pause(5000); 
+        await utilities.ReviewConfirm();
+
+       
 
     })
 
@@ -163,10 +105,9 @@ describe('International Insurance Default', () => {
 
     it('Label Print & Download DHL Courier International Insurance Default', async () => {
 
-        await iID.downloadLabel.click();
-        await browser.pause(5000);
-        await iID.printLabel.click();
-        await browser.pause(5000); 
+        await utilities.LabelPrintDownload();
+
+       
 
     })
 

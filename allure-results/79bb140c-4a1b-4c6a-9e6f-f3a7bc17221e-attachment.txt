@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "(//input[@name=\"package_value\"])[2]"
+}
