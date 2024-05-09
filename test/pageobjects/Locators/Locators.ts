@@ -365,9 +365,7 @@ get ConfirmSignup(){
   get valueItem() {
     return $("//input[@name='parcels.0.parcel_items.0.value']");
   }
-  get selectUnits() {
-    return $("//select[@id='units']");
-  }
+  
   get countryForMade() {
     return $('//button[@class="ReactFlagsSelect-module_selectBtn__19wW7 itemMadeFlagButton"]');
   }

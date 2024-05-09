@@ -50,29 +50,6 @@ describe('International Single Document', () => {
     })
 
 
-    
-
-
-  //  --------------------------------- Enter Value of percel International Single Document-------------------------
-
-
-    // it('Enter Value of percel International Single Document', async () => {
-
-    //     await iSD.lengthPercel.setValue("12");
-    //     await iSD.widthPercel.setValue("6");
-    //     await iSD.heightPercel.setValue("10");
-    //     await iSD.weightPercel.setValue("20");
-    //     await iSD.weightMeasurePercel.click();
-        
-    //     await iSD.nextButtonBuilderShipment.click();
-    //     await browser.pause(5000);
-
-
-
-
-    // })
-
-
 
 
     //--------------------------------- Select DHL Courier International Single Document -------------------------
