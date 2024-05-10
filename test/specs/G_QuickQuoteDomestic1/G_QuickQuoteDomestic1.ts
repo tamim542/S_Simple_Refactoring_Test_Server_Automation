@@ -20,7 +20,6 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it('Quick Quote Domestic Shipment', async () => {
 
-
         await qQP.quickQuoteClick.click();
         await browser.pause(5000);
 
@@ -34,10 +33,10 @@ describe('Quick Quote Domestic Shipment One', () => {
 
 
         await qQP.originPostalCode.setValue("N3L 3E1");
-        await browser.pause(3000);
+        await browser.pause(2000);
         await qQP.originPostalCodeSelect.click(); 
 
-        await qQP.destinationPostalCode.setValue("L1V 3M9");
+        await qQP.destinationPostalCode.setValue("K2H 1E5"); //L1V 3M9
         await browser.pause(3000);
         await qQP.destinationPostalCodeSelect.click();
 
@@ -63,20 +62,32 @@ describe('Quick Quote Domestic Shipment One', () => {
     it('Quick Quote Origin  address Domestic Shipment', async () => {
 
       
-        await qQP.originFirstName.setValue("Tamim");
-        await browser.pause(3000);
-        await qQP.originLastName.setValue("Bhuiyan");
-        await qQP.originCompanyName.setValue("Toto Company");
-        await browser.pause(3000);
+        await qQP.firstNameDestination.setValue("Tamim");
+        await qQP.lastNameDestination.setValue("Buiyan");
+        await qQP.phoneNumberDestination.setValue("5767435675");
+        await qQP.emailDestination.setValue("tamim@yopmail.com");
+        await qQP.companyNameDestination.setValue("Ship Simple");
 
-        await qQP.originStreetAddress.setValue("4 Brant Rd");
-        await qQP.originStreetAddressSelect.click();
+
+        await qQP.selectCountryDestination.selectByIndex(1);
+        await qQP.clickSelectStreetDestination.setValue("N3L 3E1");
+        await qQP.selectStreetDestination.click();
+
+        await browser.pause(2000);
+
+     
+
+        await qQP.unitNumberDestination.setValue("40");
        
-        await qQP.originUnitNumber.setValue("6");
-        await qQP.originPhoneNumber.setValue("3473473947");
-        await qQP.originOrderReference.setValue("19");
-        await qQP.originNextButton.click();
-        await browser.pause(5000);
+        
+        await qQP.orderDestination.setValue("13111");
+        
+
+        await browser.takeScreenshot();
+       
+        await qQP.donetButtonDestination.click();
+        await browser.takeScreenshot();
+        await browser.pause(2000);
 
         
 
@@ -90,16 +101,20 @@ describe('Quick Quote Domestic Shipment One', () => {
     it(' Quick Quote Destination Domestic Shipment ', async () => {
 
 
-        await utilities.QuickQuoteDestination();
+        // await utilities.QuickQuoteDestination();
 
-        await qQP.clickSelectStreetDestination.setValue("1298 Kingston Rd");
-        await browser.pause(5000);
+        // await qQP.clickSelectStreetDestination.setValue("1298 Kingston Rd");
+        // await browser.pause(5000);
 
-        await qQP.selectStreetDestination.click();
-        await browser.pause(4000);
+        // await qQP.selectStreetDestination.click();
+        // await browser.pause(4000);
 
-        await qQP.nextButtonDestination.click();
-        await browser.pause(5000);
+        // await qQP.nextButtonDestination.click();
+        // await browser.pause(5000);
+
+        await qQP.searchDestinationAddressFromSave.click();
+        await qQP.searchDestinationAddressFromSaveClick.waitForExist();
+        await qQP.searchDestinationAddressFromSaveClick.click();
 
 
 

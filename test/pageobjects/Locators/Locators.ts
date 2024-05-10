@@ -122,6 +122,13 @@ get ConfirmSignup(){
     return $("//span[contains(text(),'Done')]");
   }
 
+  get searchDestinationAddressFromSave(){
+    return $("(//input[@id='addressBook'])[2]");
+  }
+
+  get searchDestinationAddressFromSaveClick(){
+    return $("(//li[@class='p-2 cursor-pointer hover:bg-ternary-200 text-black text-xs border-b-2'])[1]");
+  }
 
   get provinceDestination() {
     return $("//select[@name='state']");
@@ -224,7 +231,7 @@ get ConfirmSignup(){
     return $("(//input[@name='parcels.1.weight'])[1]");
   }
   get addPercel2() {
-    return $("(//p[contains(text(),'Add')])[5]"); 
+    return $("(//p[contains(text(),'Add')])[6]"); 
   }
 
 
@@ -243,6 +250,9 @@ get ConfirmSignup(){
     return $("(//input[@name='parcels.2.weight'])[1]");
   }
   
+  get addPercel3() {
+    return $("(//p[contains(text(),'Add')])[7]"); 
+  }
 
   get lengthPercel4() {
     return $("(//input[@name='parcels.3.length'])[1]");
@@ -349,9 +359,11 @@ get ConfirmSignup(){
     return $('//select[@id="duties_taxes"]');
   }
 
-  get itemDescription() {
-    return $("//input[@id='description']");
-  }
+ 
+
+  
+//-----------------------International Multi Package part-1-------------------------------
+
   get quantity() {
     return $("//input[@placeholder='Quantity']");
   }
@@ -359,6 +371,11 @@ get ConfirmSignup(){
   get selectPackage() {
     return $("//select[@id='parcels.0.parcel_items.0.packaging']");
   }
+
+  get itemDescription() {
+    return $("//input[@id='description']");
+  }
+
   get weightItem() {
     return $("//input[@id='weight']");
   }
@@ -375,6 +392,107 @@ get ConfirmSignup(){
   get HSCode() {
     return $('//input[@placeholder="HS/Commodity Code"]');
   }
+
+
+
+
+//-----------------------International Multi Package part-2-------------------------------
+
+  get quantity2() {
+    return $("(//input[@placeholder='Quantity'])[2]");
+  }
+
+  get selectPackage2() {
+    return $("//select[@id='parcels.1.parcel_items.0.packaging']");
+  }
+
+  get itemDescription2() {
+    return $("(//input[@id='description'])[2]");
+  }
+
+  get weightItem2() {
+    return $("(//input[@id='weight'])[2]");
+  }
+  get valueItem2() {
+    return $("//input[@name='parcels.1.parcel_items.0.value']");
+  }
+  
+  get countryForMade2() {
+    return $('(//button[@class="ReactFlagsSelect-module_selectBtn__19wW7 itemMadeFlagButton"])[2]');
+  }
+  get clickCountry2() {
+    return $("(//span[contains(text(),'Belgium')])[2]");
+  }
+  get HSCode2() {
+    return $('(//input[@placeholder="HS/Commodity Code"])[2]');
+  }
+
+
+
+
+//-----------------------International Multi Package part-3-------------------------------
+
+  get quantity3() {
+    return $("(//input[@placeholder='Quantity'])[3]");
+  }
+
+  get selectPackage3() {
+    return $("//select[@id='parcels.2.parcel_items.0.packaging']");
+  }
+  get itemDescription3() {
+    return $("(//input[@id='description'])[3]");
+  }
+  get weightItem3() {
+    return $("(//input[@id='weight'])[3]");
+  }
+  get valueItem3() {
+    return $("//input[@name='parcels.2.parcel_items.0.value']");
+  }
+  
+  get countryForMade3() {
+    return $('(//button[@class="ReactFlagsSelect-module_selectBtn__19wW7 itemMadeFlagButton"])[3]');
+  }
+  get clickCountry3() {
+    return $("(//span[contains(text(),'Belgium')])[3]");
+  }
+  get HSCode3() {
+    return $('(//input[@placeholder="HS/Commodity Code"])[3]');
+  }
+
+
+
+
+//-----------------------International Multi Package part-4-------------------------------
+
+  get quantity4() {
+    return $("(//input[@placeholder='Quantity'])[4]");
+  }
+
+  get selectPackage4() {
+    return $("//select[@id='parcels.3.parcel_items.0.packaging']");
+  }
+  get itemDescription4() {
+    return $("(//input[@id='description'])[4]");
+  }
+  get weightItem4() {
+    return $("(//input[@id='weight'])[4]");
+  }
+  get valueItem4() {
+    return $("//input[@name='parcels.3.parcel_items.0.value']");
+  }
+  
+  get countryForMade4() {
+    return $('(//button[@class="ReactFlagsSelect-module_selectBtn__19wW7 itemMadeFlagButton"])[4]');
+  }
+  get clickCountry4() {
+    return $("(//span[contains(text(),'Belgium')])[4]");
+  }
+  get HSCode4() {
+    return $('(//input[@placeholder="HS/Commodity Code"])[4]');
+  }
+
+
+
 
   get invoiceNumberCheck() {
     return $('//input[@id="includeInvoice"]');
@@ -494,7 +612,7 @@ get ConfirmSignup(){
   
 
   get courierButtonNextAllCourier() {
-    return $("//button[@class='group flex items-center justify-center p-0.5 text-center relative focus:z-10 focus:outline-none bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg focus:ring-2 my-3 mr-10 sm:mr-0']");
+    return $("//button[@class='group flex items-center justify-center p-0.5 text-center relative focus:z-10 focus:outline-none bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg focus:ring-2 my-3 sm:mr-0']");
   }
 
   get i_confirm() {
@@ -639,17 +757,18 @@ get loomisnewPU() {
     return $("//input[@name='origin_postalcode_qq']");
   }
   get originPostalCodeSelect(){
-    return $("//li[@class='Layout_address__sgpFB']");
+    return $("//li[@class='Layout_address__YLXTN']");
   }
   get destinationPostalCode(){
     return $("//input[@name='destination_postalcode_qq']");
   }
+  get destinationPostalCodeSelect(){
+    return $("//li[@class='Layout_address__YLXTN']");
+  }
   get destinationCountrySelectDHL(){
     return $("//select[@name='destination_country']");
   }
-  get destinationPostalCodeSelect(){
-    return $("//li[@class='Layout_address__sgpFB']");
-  }
+
   get whatyouSendSelect(){
     return $("//select[@id='what_sending_qq']");
   }
@@ -667,7 +786,7 @@ get loomisnewPU() {
     return $("//input[@id='weight_qq']");
   }
   get getQuoteButton() {
-    return $("//span[@class='flex items-center rounded-md text-sm px-4 py-2']");
+    return $("(//span[@class='flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2'])[3]");
   }
   
   get getNewQuoteScroll() {

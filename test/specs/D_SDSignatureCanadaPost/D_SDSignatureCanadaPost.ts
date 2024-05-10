@@ -35,12 +35,6 @@ describe('Canadapost Single Domestic Signature', () => {
          await utilities.OriginAddress();
          await utilities.Destination();
 
-        //  await utilities.SuggestEnterAddress();
-        
-        
-       
-          
-
 
         await browser.pause(2000);
 
@@ -66,7 +60,7 @@ describe('Canadapost Single Domestic Signature', () => {
         // await browser.pause(10000);
 
         await sDSC.seeMoreCourierButton.waitForExist();
-        if (expect(sDSC.seeMoreCourierButton).toHaveValueContaining('View More')) {
+        if (expect(sDSC.seeMoreCourierButton).toHaveValueContaining('Load More')) {
 
             await sDSC.seeMoreCourierButton.click();
 
@@ -79,9 +73,9 @@ describe('Canadapost Single Domestic Signature', () => {
           
         if(aa=="canadapost_cp"){
         
-        await sDSC.scrollAction.scrollIntoView();
+        // await sDSC.scrollAction.scrollIntoView();
         await sDSC.Canadapost_Xpresspost.click();
-        await browser.pause(7000);
+        await browser.pause(2000);
         await sDSC.courierButtonNextAllCourier.click();
         await browser.pause(2000);
 

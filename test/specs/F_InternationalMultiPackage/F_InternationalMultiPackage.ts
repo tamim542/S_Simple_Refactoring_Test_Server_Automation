@@ -21,41 +21,10 @@ describe('International Multi Package', () => {
     it('Destination Address InternationalMulti Package', async () => {
 
 
+        await utilities.OriginAddress();
 
-        await iMP.firstNameDestination.setValue("Tamim");
-        await iMP.lastNameDestination.setValue("Buiyan");
-        await iMP.companyNameDestination.setValue("Ship Simple");
-
-        const valueCounty = await iMP.selectCountryDestination.getValue();
-
-
-        await iMP.selectCountryDestination.selectByIndex(2);
-        await iMP.clickSelectStreetDestination.setValue("4900 Bowie Dr"); //4900 Bow St
-        await browser.pause(7000);
-
-        await iMP.selectStreetDestination.click();
-        await browser.pause(4000);
-
-        await iMP.unitNumberDestination.setValue("40");
-        await iMP.phoneNumberDestination.setValue("4079472341");
-        await iMP.emailDestination.setValue("tamim@yopmail.com");
-        await iMP.orderDestination.setValue("13111");
-        await iMP.invoiceDestination.setValue("13111");
-        // await iMP.residenceAddresDestination.click();
-
-        await browser.pause(5000);
-        await iMP.nextButtonDestination.click();
-        await browser.pause(4000);
-
-        //--------------------------------- suggest adress click -------------------------
-
-        // if (expect(iMP.suggestedAddressClickForDHL).toHaveValueContaining('Use Entered Address')) {
-
-        //     await iMP.suggestedAddressClickForDHL.click();
-
-        // }
-
-        // await browser.pause(7000);
+        await utilities.DestinationAddressInternationalSingleDocument();
+       
 
 
 
@@ -70,57 +39,20 @@ describe('International Multi Package', () => {
     it('Lets Build Your Commercial Invoice International Multi Package', async () => {
 
         await iMP.package.click();
-        await iMP.selcetShipmentPurpose.selectByIndex(5);
+        await iMP.selcetShipmentPurpose.selectByIndex(4);
 
-
-        await iMP.itemDescription.setValue("For Testing Purpose");
-        await iMP.quantity.setValue("4");
-        await iMP.selectPackage.selectByIndex(3);
-        await iMP.weightItem.setValue("5");
-        await iMP.valueItem.setValue("5");
-        await browser.pause(7000);
-        await iMP.selectUnits.selectByIndex(10);
-        await browser.pause(3000);
-        await iMP.countryForMade.click();
-        await iMP.clickCountry.click();
-
-        await iMP.HSCode.click();
-        await iMP.HSCode.setValue("220");
-        await browser.pause(7000);
-        await iMP.nextButtonForItem.click();
-        await browser.pause(7000);
-    })
-
-
-    it('Lets Build Your Commercial Invoice select Who WillPay International Multi Package', async () => {
 
         await iMP.selectWhoWillPay.selectByIndex(2);
-        await iMP.nextButtonForShip.click();
-        await browser.pause(3000);
-    })
 
-    it('Lets Build Your Commercial Invoice Next International Multi Package', async () => {
-
-
-        await iMP.nextButtonForShipConfirm.click();
-        await browser.pause(5000);
-
-    })
-
-
-  //  --------------------------------- Enter Value of percel International Multi Package-------------------------
-
-
-    it('Enter Value of percel International Multi Package', async () => {
-
-       
-       
         await utilities.LetsBuildYourShipmentWithnternationalMultiPackage();
-       
         
 
+        await iMP.invoiceNumberCheck.click();
+        await iMP.invoiceNumber.setValue("20");
+        await iMP.additionalInvoiceInformation.setValue("Only for Testing");
 
-
+        await iMP.nextButtonForShip.waitForExist();
+        await iMP.nextButtonForShip.click();
 
     })
 
@@ -132,7 +64,7 @@ describe('International Multi Package', () => {
 
     it('Select DHL courier International Multi Package', async () => {
 
-        await browser.pause(7000);
+        await iMP.DHLCLick.waitForExist();
         await iMP.DHLCLick.click();
         await iMP.DHLNextButton.click();
         await browser.pause(7000);
@@ -147,9 +79,7 @@ describe('International Multi Package', () => {
     
     it('Review & Confirm DHL Courier International Multi Package', async () => {
 
-        await iMP.confirmInformation.click();
-        await iMP.labelPurchaseButton.click();
-        await browser.pause(5000); 
+        await utilities.ReviewConfirm();
 
     })
 
@@ -157,10 +87,8 @@ describe('International Multi Package', () => {
 
     it('Label Print & Download DHL Courier International Multi Package', async () => {
 
-        await iMP.downloadLabel.click();
-        await browser.pause(5000);
-        await iMP.printLabel.click();
-        await browser.pause(5000); 
+        
+        await utilities.LabelPrintDownload();
 
     })
 

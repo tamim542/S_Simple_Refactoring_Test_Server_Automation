@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//label[contains(text(),'I confirm the information entered is complete and accurate.')]"
+}

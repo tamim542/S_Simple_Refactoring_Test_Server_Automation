@@ -58,7 +58,7 @@ describe('International Insurance Default', () => {
 
         await iID.HSCode.click();
         await iID.HSCode.setValue("220");
-        // await iID.selectUnits.selectByIndex(10);
+       
 
         await iID.invoiceNumberCheck.click();
         await iID.invoiceNumber.setValue("20");

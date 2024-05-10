@@ -112,7 +112,7 @@ class Utilities {
         await browser.pause(5000);
         await desti.donetButtonDestination.click();
         await browser.takeScreenshot();
-        await browser.pause(7000);
+        await browser.pause(2000);
 
     }
 
@@ -151,7 +151,7 @@ class Utilities {
         await rW.labelPurchaseButtonAllCourier.waitForClickable();
         await rW.labelPurchaseButtonAllCourier.click();
         await browser.takeScreenshot();
-        browser.pause(5000);
+        // browser.pause(5000);
         await browser.takeScreenshot();
 
     }
@@ -442,30 +442,80 @@ class Utilities {
         await lBYS.lengthPercel1.setValue("12");
         await lBYS.widthPercel1.setValue("6");
         await lBYS.heightPercel1.setValue("10");
-        await lBYS.weightPercel1.setValue("5");
+        await lBYS.weightPercel1.setValue("15");
+
+        await lBYS.quantity.setValue("3");
+        await lBYS.selectPackage.selectByIndex(3);
+        await lBYS.itemDescription.setValue("For Testing Purpose");
+        await lBYS.weightItem.setValue("5");
+        await lBYS.valueItem.setValue("30");
+        await lBYS.countryForMade.click();
+        await lBYS.clickCountry.click();
+        await browser.pause(2000);
+        await lBYS.HSCode.click();
+        await lBYS.HSCode.setValue("220");
         await lBYS.addPercel1.click();
+
+
 
         await lBYS.lengthPercel2.setValue("12");
         await lBYS.widthPercel2.setValue("6");
         await lBYS.heightPercel2.setValue("10");
-        await lBYS.weightPercel2.setValue("5");
+        await lBYS.weightPercel2.setValue("12");
+
+        await lBYS.quantity2.setValue("3");
+        await lBYS.selectPackage2.selectByIndex(3);
+        await lBYS.itemDescription2.setValue("For Testing Purpose");
+        await lBYS.weightItem2.setValue("4");
+        await lBYS.valueItem2.setValue("30");
+        await lBYS.countryForMade2.click();
+        await lBYS.clickCountry2.click();
+        await browser.pause(2000);
+        await lBYS.HSCode2.click();
+        await lBYS.HSCode2.setValue("220");
         await lBYS.addPercel2.click();
+
+
 
         await lBYS.lengthPercel3.setValue("12");
         await lBYS.widthPercel3.setValue("6");
         await lBYS.heightPercel3.setValue("10");
-        await lBYS.weightPercel3.setValue("5");
-        // await lBYS.addPercel3.click();
+        await lBYS.weightPercel3.setValue("4");
+        await lBYS.addPercel3.click();
 
-        await lBYS.lengthPercel4.setValue("12");
+        await lBYS.quantity3.setValue("2");
+        await lBYS.selectPackage3.selectByIndex(3);
+        await lBYS.itemDescription3.setValue("For Testing Purpose");
+        await lBYS.weightItem3.setValue("2");
+        await lBYS.valueItem3.setValue("30");
+        await lBYS.countryForMade3.click();
+        await lBYS.clickCountry3.click();
+        await browser.pause(2000);
+        await lBYS.HSCode3.click();
+        await lBYS.HSCode3.setValue("220");
+
+
+
+        await lBYS.lengthPercel4.setValue("2");
         await lBYS.widthPercel4.setValue("6");
-        await lBYS.heightPercel4.setValue("10");
-        await lBYS.weightPercel4.setValue("5");
+        await lBYS.heightPercel4.setValue("4");
+        await lBYS.weightPercel4.setValue("9");
+
+        await lBYS.quantity4.setValue("3");
+        await lBYS.selectPackage4.selectByIndex(3);
+        await lBYS.itemDescription4.setValue("For Testing Purpose");
+        await lBYS.weightItem4.setValue("3");
+        await lBYS.valueItem4.setValue("30");
+        await lBYS.countryForMade4.click();
+        await lBYS.clickCountry4.click();
+        // await browser.pause(2000);
+        await lBYS.HSCode4.click();
+        await lBYS.HSCode4.setValue("220");
 
         await lBYS.shipmentProtection.click();
 
-        await lBYS.nextButtonBuilderShipment.click();
-        await browser.pause(7000);
+        // await lBYS.nextButtonBuilderShipment.click();
+        await browser.pause(2000);
     }
 
 

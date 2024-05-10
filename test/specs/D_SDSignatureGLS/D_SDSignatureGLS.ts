@@ -73,7 +73,7 @@ describe('GLS Single Domestic Signature', () => {
         if (GLS == "gls") {
             // await sDSG.GLSScrollAction.scrollIntoView();
             await sDSG.GLS.click();
-            await browser.pause(7000);
+            await browser.pause(2000);
             await sDSG.courierButtonNextAllCourier.click();
         }else {
             console.log("\n=======================================================================================\n");
