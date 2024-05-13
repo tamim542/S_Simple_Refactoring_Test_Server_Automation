@@ -793,6 +793,13 @@ get loomisnewPU() {
     return $("(//span[@class='flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2'])[3]");
   }
   
+  get cheapRatecourierForQuickQuote() {
+    return $("(//img[@loading='lazy'])[8]");
+  }
+  get cheapRatecourierValueForQuickQuote() {
+    return $("(//p[@class='text-lg mt-2 font-bold'])[1]");
+  }
+
   get getNewQuoteScroll() {
     return $("//span[contains(text(),'Get A New Quote')]");
   }

@@ -6,6 +6,9 @@ describe('Quick Quote Domestic Shipment One', () => {
     const qQP = new QuickQuotePurolator();
     const utilities = new Utilities();
 
+    let cheapRateCourierName:string;
+    let cheaprateValue:string;
+    let altAttribute:string;
 
 
     before('OPen the app', async () => {
@@ -41,13 +44,41 @@ describe('Quick Quote Domestic Shipment One', () => {
         await qQP.destinationPostalCodeSelect.click();
 
         await qQP.whatyouSendSelect.selectByIndex(1);
-        await qQP.lengthDimensions.setValue(16);
-        await qQP.widthDimensions.setValue(16);
-        await qQP.heightDimensions.setValue(16);
-        await qQP.weightDimensions.setValue(16);
+        await qQP.lengthDimensions.setValue(5);
+        await qQP.widthDimensions.setValue(7);
+        await qQP.heightDimensions.setValue(3);
+        await qQP.weightDimensions.setValue(7);
         await qQP.getQuoteButton.click();
         await browser.pause(2000);
         // await qQP.getNewQuoteScroll.waitForDisplayed();
+
+        cheaprateValue = await qQP.cheapRatecourierValueForQuickQuote.getText();
+
+
+       
+        console.log("\cheaprateValue============================",cheaprateValue,"========\n");
+          
+     
+      
+    
+
+    const IMG = await $$('img'); 
+
+    for (let i=0; i<=10; i++) {
+        const attr = await IMG[i].getAttribute('alt');
+        altAttribute=attr
+        if(altAttribute=='GLS'|| altAttribute=='Loomis'|| altAttribute=='Canada Post CP'|| altAttribute=='gls'){
+
+            break;
+        }
+        
+      }
+      console.log("altAttribute======================",altAttribute); 
+
+    
+
+
+
         await qQP.getNewQuoteScroll.scrollIntoView();
         await qQP.completeThisShipmetButton.click();
         await browser.pause(2000);
@@ -122,6 +153,8 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it('Quick Quote Lets your Build Shipment Domestic Shipment', async () => {
 
+        
+
         await qQP.nextButtonBuilderShipment.click();
 
 
@@ -135,8 +168,7 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it('Quick Quote From Select Domestic Shipment Courier', async () => {
 
-        await browser.pause(2000);
-
+        await qQP.selectACourier.waitForExist();
         await qQP.selectACourier.click();
         await browser.pause(2000);
         await qQP.courierButtonNextAllCourier.click();
@@ -182,7 +214,6 @@ describe('Quick Quote Domestic Shipment One', () => {
         console.log("=======================================================================================\n");
     
    
-
 
 })
 

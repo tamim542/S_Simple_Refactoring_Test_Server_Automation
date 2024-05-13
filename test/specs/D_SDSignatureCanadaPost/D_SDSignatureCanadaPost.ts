@@ -47,7 +47,7 @@ describe('Canadapost Single Domestic Signature', () => {
 
 
         await utilities.LetsBuildYourShipmentWithSignature();
-        await browser.pause(7000);
+        await browser.pause(2000);
 
 
     })
