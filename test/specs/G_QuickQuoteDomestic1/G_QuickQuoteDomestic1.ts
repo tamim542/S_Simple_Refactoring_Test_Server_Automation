@@ -36,7 +36,7 @@ describe('Quick Quote Domestic Shipment One', () => {
         await browser.pause(2000);
         await qQP.originPostalCodeSelect.click(); 
 
-        await qQP.destinationPostalCode.setValue("K2H 1E5"); //L1V 3M9
+        await qQP.destinationPostalCode.setValue("L1V 3M9"); //L1V 3M9 //K2H 1E5 
         await browser.pause(3000);
         await qQP.destinationPostalCodeSelect.click();
 
@@ -100,21 +100,18 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it(' Quick Quote Destination Domestic Shipment ', async () => {
 
+        qQP.svgEditIconDestination.click();
 
-        // await utilities.QuickQuoteDestination();
+        await utilities.QuickQuoteDestination();
 
-        // await qQP.clickSelectStreetDestination.setValue("1298 Kingston Rd");
-        // await browser.pause(5000);
+        await qQP.clickSelectStreetDestination.setValue("2-1298 Kingston Rd"); //1298 Kingston Rd
+        await browser.pause(5000);
 
-        // await qQP.selectStreetDestination.click();
-        // await browser.pause(4000);
+        await qQP.selectStreetDestination.click();
+        await browser.pause(4000);
 
-        // await qQP.nextButtonDestination.click();
-        // await browser.pause(5000);
-
-        await qQP.searchDestinationAddressFromSave.click();
-        await qQP.searchDestinationAddressFromSaveClick.waitForExist();
-        await qQP.searchDestinationAddressFromSaveClick.click();
+        await qQP.donetButtonDestination.click();
+        await browser.pause(2000);
 
 
 
@@ -125,7 +122,7 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it('Quick Quote Lets your Build Shipment Domestic Shipment', async () => {
 
-        await qQP.originNextButtonBuild.click();
+        await qQP.nextButtonBuilderShipment.click();
 
 
 
@@ -138,10 +135,10 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it('Quick Quote From Select Domestic Shipment Courier', async () => {
 
-        await browser.pause(7000);
+        await browser.pause(2000);
 
         await qQP.selectACourier.click();
-        await browser.pause(7000);
+        await browser.pause(2000);
         await qQP.courierButtonNextAllCourier.click();
         await browser.pause(2000);
 

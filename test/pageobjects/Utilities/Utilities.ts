@@ -566,7 +566,7 @@ class Utilities {
 
 
 
-        await browser.pause(7000);
+        await browser.pause(2000);
 
     }
 

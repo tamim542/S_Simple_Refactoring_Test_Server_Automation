@@ -122,6 +122,10 @@ get ConfirmSignup(){
     return $("//span[contains(text(),'Done')]");
   }
 
+  get svgEditIconDestination() {
+    return $("//body/div[@id='__next']/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/*[1]");
+  }
+
   get searchDestinationAddressFromSave(){
     return $("(//input[@id='addressBook'])[2]");
   }
