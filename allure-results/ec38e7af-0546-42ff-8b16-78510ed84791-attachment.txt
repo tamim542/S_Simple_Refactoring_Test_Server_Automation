@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//input[@name='destination_postalcode_qq']"
+}

@@ -6,6 +6,13 @@ describe('Quick Quote Domestic shipment Two', () => {
     const qQL = new QuickQuoteLoomis();
     const utilities = new Utilities();
 
+    let cheapRateCourierName: string;
+    let quickQuoteCheaprateValue: string;
+    let altAttribute: string;
+
+    let canadaPost: string;
+    let gls1: string;
+    let loomis1: string;
 
 
     before('OPen the app', async () => {
@@ -16,13 +23,12 @@ describe('Quick Quote Domestic shipment Two', () => {
 
     })
 
-    //--------------------------------- Quick Quote  Loomis-------------------------
+    //--------------------------------- Quick Quote  GLS-------------------------
 
     it('Quick Quote for Domestic shipment two', async () => {
 
-
         await qQL.quickQuoteClick.click();
-        await browser.pause(5000);
+        await browser.pause(3000);
 
 
     })
@@ -33,22 +39,44 @@ describe('Quick Quote Domestic shipment Two', () => {
     it('Quick Quote Origin Destination postal code province country address for Domestic shipment two', async () => {
 
 
-        await qQL.originPostalCode.setValue("T5Y 2W1");
+        await qQL.originPostalCode.setValue("K2H 1E5");
         await browser.pause(3000);
-        await qQL.originPostalCodeSelect.click(); 
+        await qQL.originPostalCodeSelect.click();
 
-        await qQL.destinationPostalCode.setValue("N3L 3E1");
+        await qQL.destinationPostalCode.setValue("R2L 1J9");
         await browser.pause(3000);
         await qQL.destinationPostalCodeSelect.click();
 
         await qQL.whatyouSendSelect.selectByIndex(1);
-        await qQL.lengthDimensions.setValue(34);
-        await qQL.widthDimensions.setValue(34);
-        await qQL.heightDimensions.setValue(34);
-        await qQL.weightDimensions.setValue(34);
+        await qQL.lengthDimensions.setValue(3);
+        await qQL.widthDimensions.setValue(8);
+        await qQL.heightDimensions.setValue(5);
+        await qQL.weightDimensions.setValue(13);
         await qQL.getQuoteButton.click();
         await browser.pause(2000);
-        await qQL.getNewQuoteScroll.waitForDisplayed();
+        // await qQL.getNewQuoteScroll.waitForDisplayed();
+
+
+        quickQuoteCheaprateValue = await qQL.cheapRatecourierValueForQuickQuote.getText();
+        console.log("quickQuoteCheaprateValue======================", quickQuoteCheaprateValue);
+
+
+
+        const IMG = await $$('img');
+
+        for (let i = 0; i <= 10; i++) {
+            const attr = await IMG[i].getAttribute('alt');
+            altAttribute = attr
+            if (altAttribute == 'GLS' || altAttribute == 'Loomis' || altAttribute == 'Canada Post CP' || altAttribute == 'gls') {
+
+                break;
+            }
+
+        }
+        console.log("altAttribute======================", altAttribute);
+
+
+
         await qQL.getNewQuoteScroll.scrollIntoView();
         await qQL.completeThisShipmetButton.click();
         await browser.pause(5000);
@@ -63,22 +91,31 @@ describe('Quick Quote Domestic shipment Two', () => {
     it('Quick Quote Origin  address for Domestic shipment two', async () => {
 
 
-        await qQL.originFirstName.setValue("Tamim");
-        await browser.pause(3000);
-        await qQL.originLastName.setValue("Bhuiyan");
-        await qQL.originCompanyName.setValue("Toto Company");
-        await browser.pause(3000);
+        await qQL.firstNameDestination.setValue("Tamim");
+        await qQL.lastNameDestination.setValue("Bhuiyan");
+        await qQL.phoneNumberDestination.setValue("5767435675");
+        await qQL.emailDestination.setValue("tamim@yopmail.com");
+        await qQL.companyNameDestination.setValue("Ship Simple");
 
-        await qQL.originStreetAddress.setValue("5904 153 Ave NW");
-        await qQL.originStreetAddressSelect.click();
-       
-        await qQL.originUnitNumber.setValue("6");
-        await qQL.originPhoneNumber.setValue("3473473947");
-        await qQL.originOrderReference.setValue("19");
-        await qQL.originNextButton.click();
-        await browser.pause(5000);
+        await qQL.selectCountryDestination.selectByIndex(1);
+        await qQL.clickSelectStreetDestination.setValue("2 Nautica Pvt"); //K2H 1E5
+        await qQL.selectStreetDestination.click();
 
         
+
+        await qQL.unitNumberDestination.setValue("6");
+        await qQL.orderDestination.setValue("3473473947");
+
+        await browser.takeScreenshot();
+       
+        await qQL.donetButtonDestination.click();
+        await browser.takeScreenshot();
+        await browser.pause(2000);
+
+       
+        
+
+
 
 
     })
@@ -90,16 +127,19 @@ describe('Quick Quote Domestic shipment Two', () => {
     it(' Quick Quote Destination Address for Domestic shipment two', async () => {
 
 
+        qQL.svgEditIconDestination.click();
+
         await utilities.QuickQuoteDestination();
 
-        await qQL.clickSelectStreetDestination.setValue("4 Brant Rd");
+        await qQL.clickSelectStreetDestination.setValue("101-182 Glenwood Cres"); //1298 Kingston Rd
         await browser.pause(5000);
 
         await qQL.selectStreetDestination.click();
         await browser.pause(4000);
 
-        await qQL.nextButtonDestination.click();
-        await browser.pause(5000);
+        await qQL.donetButtonDestination.click();
+        await browser.pause(2000);
+
 
 
 
@@ -110,7 +150,7 @@ describe('Quick Quote Domestic shipment Two', () => {
 
     it('Quick Quote Lets your Build Shipment for Domestic shipment two', async () => {
 
-        await qQL.originNextButtonBuild.click();
+        await qQL.nextButtonBuilderShipment.click();
 
 
 
@@ -123,12 +163,43 @@ describe('Quick Quote Domestic shipment Two', () => {
 
     it('Quick Quote From Select for Domestic shipment two', async () => {
 
-        await browser.pause(7000);
+        await qQL.elementAppearForCourierRatePage.waitForExist();
 
-        // await qQL.purolator_Xpresspost.click();
-        await browser.pause(7000);
-        await qQL.courierButtonNextAllCourier.click();
+        const td1=$("td");
+        let tdClassValue = await td1.getAttribute('class');
+        console.log("\n tdClassValue======================",tdClassValue);
+
+
+        if(tdClassValue=='loomis_api'){
+             loomis1 = 'Loomis';
+             console.log("\n loomis1======================",loomis1);
+        }
+        else if(tdClassValue=='gls'){
+             gls1 = 'GLS';
+             console.log("\n gls1======================",gls1);
+        }
+        else if(tdClassValue=='canadapost_cp'){
+             canadaPost = 'Canada Post CP';
+
+        }else{
+            console.log("\n ===========Do  not found any courier for match===========");
+        }
+  
+         const corierRat= await await qQL.cheapCourierValue.getText();
+         console.log("\n corierRat======================",corierRat);
+
+        if(altAttribute==canadaPost || altAttribute==gls1 || altAttribute==loomis1 && quickQuoteCheaprateValue==corierRat){
+            console.log("\n=======================================================================================\n");
+            console.log("  "+" Quick Quote Courier rat and Shipment courier rat are same"+  "\n");
+            console.log("=======================================================================================\n");
+            await qQL.courierButtonNextAllCourier.click();
+            await browser.pause(2000);
+
+        }
+
         await browser.pause(2000);
+        
+
 
 
     })
@@ -156,22 +227,22 @@ describe('Quick Quote Domestic shipment Two', () => {
     })
 
 
-     //------------------------------------------  Label print and Download Done Quick Quote for Domestic shipment two----------------------------------
+    //------------------------------------------  Label print and Download Done Quick Quote for Domestic shipment two----------------------------------
 
-     it(' Label print and Download Done Quick Quote for Domestic shipment two', async () => {
+    it(' Label print and Download Done Quick Quote for Domestic shipment two', async () => {
 
         await browser.pause(2000);
         await qQL.done.click();
         await browser.takeScreenshot();
         await browser.pause(2000);
         console.log("\n=======================================================================================\n");
-        console.log("----------------------------"+" Label print and Download Done Quick Quote for Domestic shipment two"+"------------------------------\n");
+        console.log("    " + " Label print and Download Done Quick Quote for Domestic shipment two" + "    \n");
         console.log("=======================================================================================\n");
-    
-   
 
 
-})
+
+
+    })
 
 
 

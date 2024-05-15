@@ -7,8 +7,12 @@ describe('Quick Quote Domestic Shipment One', () => {
     const utilities = new Utilities();
 
     let cheapRateCourierName:string;
-    let cheaprateValue:string;
+    let quickQuoteCheaprateValue:string;
     let altAttribute:string;
+
+    let canadaPost:string;
+    let gls1:string;
+    let loomis1:string;
 
 
     before('OPen the app', async () => {
@@ -24,7 +28,7 @@ describe('Quick Quote Domestic Shipment One', () => {
     it('Quick Quote Domestic Shipment', async () => {
 
         await qQP.quickQuoteClick.click();
-        await browser.pause(5000);
+        await browser.pause(3000);
 
 
     })
@@ -52,14 +56,9 @@ describe('Quick Quote Domestic Shipment One', () => {
         await browser.pause(2000);
         // await qQP.getNewQuoteScroll.waitForDisplayed();
 
-        cheaprateValue = await qQP.cheapRatecourierValueForQuickQuote.getText();
+        quickQuoteCheaprateValue = await qQP.cheapRatecourierValueForQuickQuote.getText();
+        console.log("quickQuoteCheaprateValue======================",quickQuoteCheaprateValue);
 
-
-       
-        console.log("\cheaprateValue============================",cheaprateValue,"========\n");
-          
-     
-      
     
 
     const IMG = await $$('img'); 
@@ -90,7 +89,7 @@ describe('Quick Quote Domestic Shipment One', () => {
     //---------------------------------Quick Quote Origin address  Domestic Shipment-------------------------
 
 
-    it('Quick Quote Origin  address Domestic Shipment', async () => {
+    it('Quick Quote Origin  address Domestic Shipment one', async () => {
 
       
         await qQP.firstNameDestination.setValue("Tamim");
@@ -108,9 +107,7 @@ describe('Quick Quote Domestic Shipment One', () => {
 
      
 
-        await qQP.unitNumberDestination.setValue("40");
-       
-        
+        await qQP.unitNumberDestination.setValue("40");  
         await qQP.orderDestination.setValue("13111");
         
 
@@ -168,11 +165,44 @@ describe('Quick Quote Domestic Shipment One', () => {
 
     it('Quick Quote From Select Domestic Shipment Courier', async () => {
 
-        await qQP.selectACourier.waitForExist();
-        await qQP.selectACourier.click();
+
+        await qQP.elementAppearForCourierRatePage.waitForExist();
+
+        const td1=$("td");
+        let tdClassValue = await td1.getAttribute('class');
+        console.log("\n tdClassValue======================",tdClassValue);
+
+        if(tdClassValue='loomis_api'){
+             loomis1 = 'Loomis';
+             console.log("\n loomis1======================",loomis1);
+
+
+        }
+        else if(tdClassValue='gls'){
+             gls1 = 'GLS';
+
+        }
+        else if(tdClassValue='canadapost_cp'){
+             canadaPost = 'Canada Post CP';
+
+        }else{
+            console.log("\n ===========Do  not found any courier for match===========");
+        }
+  
+         const corierRat= await await qQP.cheapCourierValue.getText();
+         console.log("\n corierRat======================",corierRat);
+
+        if(altAttribute==canadaPost || altAttribute==gls1 || altAttribute==loomis1 && quickQuoteCheaprateValue==corierRat){
+            console.log("\n=======================================================================================\n");
+            console.log("  "+" Quick Quote Courier rat and Shipment courier rat are same"+  "\n");
+            console.log("=======================================================================================\n");
+            await qQP.courierButtonNextAllCourier.click();
+            await browser.pause(2000);
+
+        }
+
         await browser.pause(2000);
-        await qQP.courierButtonNextAllCourier.click();
-        await browser.pause(2000);
+        
 
 
     })
@@ -210,7 +240,7 @@ describe('Quick Quote Domestic Shipment One', () => {
         await browser.takeScreenshot();
         await browser.pause(2000);
         console.log("\n=======================================================================================\n");
-        console.log("----------------------------"+" Label print and Download Done Quick Quote Domestic Shipment"+"------------------------------\n");
+        console.log("    "+" Label print and Download Done Quick Quote Domestic Shipment"+"    \n");
         console.log("=======================================================================================\n");
     
    

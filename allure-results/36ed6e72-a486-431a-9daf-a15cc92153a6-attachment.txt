@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "(//span[@class=\"RateTable_checkmark__T6kfB dhl_api\"])[1]"
+}

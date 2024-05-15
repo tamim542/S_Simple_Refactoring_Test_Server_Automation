@@ -94,7 +94,7 @@ class Utilities {
 
 
         await desti.selectCountryDestination.selectByIndex(1);
-        await desti.clickSelectStreetDestination.setValue("4 Brant Rd");
+        await desti.clickSelectStreetDestination.setValue("100-525 Fafard Ave"); //4 Brant Rd
         await desti.selectStreetDestination.click();
 
         await browser.pause(3000);
@@ -105,8 +105,8 @@ class Utilities {
         await desti.unitNumberDestination.setValue("40");
        
         
-        await desti.orderDestination.setValue("13111");
-        await desti.invoiceDestination.setValue("13111");
+        await desti.orderDestination.setValue("1");
+        await desti.invoiceDestination.setValue("3");
 
         await browser.takeScreenshot();
         await browser.pause(5000);
@@ -123,10 +123,10 @@ class Utilities {
 
         const lBYS = new LabelPurchaseByAllCourierUtilities();
 
-        await lBYS.lengthPercel.setValue("12");
-        await lBYS.widthPercel.setValue("6");
-        await lBYS.heightPercel.setValue("10");
-        await lBYS.weightPercel.setValue("11");
+        await lBYS.lengthPercel.setValue("2");
+        await lBYS.widthPercel.setValue("1");
+        await lBYS.heightPercel.setValue("3");
+        await lBYS.weightPercel.setValue("2");
         // await lBYS.weightMeasurePercel.click();
         await browser.takeScreenshot();
         await lBYS.nextButtonBuilderShipmentScroll.scrollIntoView();

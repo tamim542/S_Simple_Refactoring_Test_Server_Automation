@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//button[@class='group flex items-center justify-center p-0.5 text-center relative focus:z-10 focus:outline-none bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg focus:ring-2 my-3 sm:mr-0']"
+}

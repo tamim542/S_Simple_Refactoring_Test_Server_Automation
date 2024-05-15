@@ -288,9 +288,9 @@ get ConfirmSignup(){
     return $("//td[contains(text(),'GRD')]");
   }
 
-  get selectACourier() {
-    return $("(//label[@class='Table_container__rKj3W'])[1]");
-  }
+  // get selectACourier() {
+  //   return $("(//label[@class='Table_container__rKj3W'])[1]");
+  // }
   get courierButtonNext() {
     return $("(//button[@class='Button_primary_button__psbZE Button_btn__zvUAT Button_btn__zvUAT'])[2]");
   }
@@ -806,6 +806,18 @@ get loomisnewPU() {
   get completeThisShipmetButton() {
     return $("//span[contains(text(),'Complete This Shipment')]");
   }
+  
+
+
+
+  get elementAppearForCourierRatePage() {
+    return $("(//img[@loading='lazy'])[7]");
+  }
+
+  get cheapCourierValue() {
+    return $("//tbody/tr[1]/td[7]");
+  }
+
 
 
    //--------------------------------- Origin address  -------------------------
