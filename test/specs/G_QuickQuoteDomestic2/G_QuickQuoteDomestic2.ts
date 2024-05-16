@@ -127,12 +127,12 @@ describe('Quick Quote Domestic shipment Two', () => {
     it(' Quick Quote Destination Address for Domestic shipment two', async () => {
 
 
-        qQL.svgEditIconDestination.click();
+        await qQL.svgEditIconDestination.click();
 
         await utilities.QuickQuoteDestination();
 
         await qQL.clickSelectStreetDestination.setValue("101-182 Glenwood Cres"); //1298 Kingston Rd
-        await browser.pause(5000);
+        await browser.pause(2000);
 
         await qQL.selectStreetDestination.click();
         await browser.pause(4000);

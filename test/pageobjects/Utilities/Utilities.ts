@@ -145,7 +145,7 @@ class Utilities {
         const rW = new LabelPurchaseByAllCourierUtilities();
 
         
-        await  rW.i_confirm.waitForExist();
+        await rW.i_confirm.waitForExist();
         await rW.i_confirm.click();
         await rW.i_confirm.click();
         await rW.labelPurchaseButtonAllCourier.waitForClickable();

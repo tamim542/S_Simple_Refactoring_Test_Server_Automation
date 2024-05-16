@@ -64,20 +64,21 @@ describe('Quick Quote DHL', () => {
     it('Quick Quote Origin  address DHL', async () => {
 
 
-        await qQD.originFirstName.setValue("Tamim");
-        await browser.pause(3000);
-        await qQD.originLastName.setValue("Bhuiyan");
-        await qQD.originCompanyName.setValue("Toto Company");
-        await browser.pause(3000);
+        await qQD.firstNameDestination.setValue("Tamim");
+        await qQD.lastNameDestination.setValue("Bhuiyan");
+        await qQD.phoneNumberDestination.setValue("5767435675");
+        await qQD.emailDestination.setValue("tamim@yopmail.com");
+        await qQD.companyNameDestination.setValue("Toto Company");
 
-        await qQD.originStreetAddress.setValue("4 Brant Rd");
-        await qQD.originStreetAddressSelect.click();
+        await qQD.selectCountryDestination.selectByIndex(1);
+        await qQD.clickSelectStreetDestination.setValue("2 Queenston St"); //K2H 1E5
+        // await qQD.originStreetAddress.setValue("4 Brant Rd");
+        await qQD.selectStreetDestination.click();
        
-        await qQD.originUnitNumber.setValue("6");
-        await qQD.originPhoneNumber.setValue("3473473947");
-        await qQD.originOrderReference.setValue("19");
-        await qQD.originNextButton.click();
-        await browser.pause(5000);
+        await qQD.unitNumberDestination.setValue("6");
+        await qQD.orderDestination.setValue("19");
+        await qQD.donetButtonDestination.click();
+        await browser.pause(3000);
 
         
 
@@ -90,41 +91,26 @@ describe('Quick Quote DHL', () => {
 
     it(' Quick Quote Destination Address DHL', async () => {
 
-
+        await qQD.svgEditIconDestination.click();
+        
         await utilities.QuickQuoteDestination();
 
         await qQD.clickSelectStreetDestination.setValue("PO Box 50036");
-        await browser.pause(5000);
+        await browser.pause(2000);
 
         await qQD.selectStreetDestination.click();
         await browser.pause(4000);
 
-        await qQD.nextButtonDestination.click();
+        await qQD.donetButtonDestination.click();
         await browser.pause(5000);
 
 
-        // if (expect(qQD.suggestedAddressClickForDHL).toHaveValueContaining('Use Suggested Address')) {
 
-            // await qQD.suggestedAddressClickForDHL.click();
-
-        // }
-
-        await browser.pause(5000);
+        await browser.pause(2000);
 
 
 
     })
-
-
-
-      //--------------------------------- suggest adress click Quick Quote DHL-------------------------
-
-
-    //   it(' Quick Quote suggest adress for DHL', async () => {
-
-        
-
-    // })
 
 
 
@@ -133,66 +119,46 @@ describe('Quick Quote DHL', () => {
     it('Lets Build Your Commercial Invoice International DHL', async () => {
 
         await qQD.package.click();
-        await qQD.selcetShipmentPurpose.selectByIndex(5);
+        await qQD.selcetShipmentPurpose.selectByIndex(4);
 
-
-        await qQD.itemDescription.setValue("For Testing Purpose");
-        await qQD.quantity.setValue("3");
-        await qQD.selectPackage.selectByIndex(3);
-        await qQD.weightItem.setValue("20");
-        await qQD.valueItem.setValue("20");
-        await browser.pause(7000);
-        await qQD.selectUnits.selectByIndex(10);
-        await browser.pause(3000);
-        await qQD.countryForMade.click();
-        await qQD.clickCountry.click();
-
-        await qQD.HSCode.click();
-        await qQD.HSCode.setValue("220");
-        await browser.pause(7000);
-        await qQD.nextButtonForItem.click();
-        await browser.pause(7000);
-    })
-
-
-    
-
-
-    it('Lets Build Your Commercial Invoice select Who WillPay Quick Quote DHL', async () => {
 
         await qQD.selectWhoWillPay.selectByIndex(2);
-        await qQD.nextButtonForShip.click();
-        await browser.pause(3000);
-    })
-
-    it('Lets Build Your Commercial Invoice Next Quick Quote DHL', async () => {
-
-
-        await qQD.nextButtonForShipConfirm.click();
-        await browser.pause(5000);
-
-    })
-
-
-  //  --------------------------------- Enter Value of percel Quick Quote DHL-------------------------
-
-
-    it('Enter Value of percel Quick Quote DHL', async () => {
 
         await qQD.lengthPercel.setValue("12");
         await qQD.widthPercel.setValue("6");
         await qQD.heightPercel.setValue("10");
         await qQD.weightPercel.setValue("60");
         await qQD.weightMeasurePercel.click();
+
+        
+        await qQD.quantity.setValue("3");
+        await qQD.selectPackage.selectByIndex(3);
+        await qQD.itemDescription.setValue("For Testing Purpose");
+        await qQD.weightItem.setValue("20");
+        await qQD.valueItem.setValue("30");
+        await qQD.countryForMade.click();
+        await qQD.clickCountry.click();
+        await browser.pause(2000);
+
+        await qQD.HSCode.click();
+        await qQD.HSCode.setValue("220");
+        
         await qQD.shipmentProtection.click();
-        // await qQD.valueOfShipmentProtection.setValue("100");
-        await qQD.nextButtonBuilderShipment.click();
-        await browser.pause(5000);
+        await browser.pause(2000);
 
+        await qQD.invoiceNumberCheck.click();
+        await qQD.invoiceNumber.setValue("20");
+        await qQD.additionalInvoiceInformation.setValue("Only for Testing");
 
+        await browser.pause(2000);
+        await qQD.nextButtonForShip.click();
 
-
+        await browser.pause(2000);
+        
     })
+
+
+    
 
 
 
@@ -202,10 +168,10 @@ describe('Quick Quote DHL', () => {
 
     it('Select DHL courier Quick Quote DHL', async () => {
 
-        await browser.pause(7000);
+        await qQD.DHLCLick.waitForExist();
         await qQD.DHLCLick.click();
         await qQD.DHLNextButton.click();
-        await browser.pause(7000);
+        await browser.pause(3000);
 
 
 
@@ -217,9 +183,7 @@ describe('Quick Quote DHL', () => {
     
     it('Review & Confirm Quick Quote DHL Courier', async () => {
 
-        await qQD.confirmInformation.click();
-        await qQD.labelPurchaseButton.click();
-        await browser.pause(5000); 
+        await utilities.ReviewConfirm();
 
     })
 
@@ -227,10 +191,8 @@ describe('Quick Quote DHL', () => {
 
     it('Label Print & Download DHL Courier Quick Quote DHL', async () => {
 
-        await qQD.downloadLabel.click();
-        await browser.pause(5000);
-        await qQD.printLabel.click();
-        await browser.pause(5000); 
+        await utilities.LabelPrintDownload();
+
 
     })
 
