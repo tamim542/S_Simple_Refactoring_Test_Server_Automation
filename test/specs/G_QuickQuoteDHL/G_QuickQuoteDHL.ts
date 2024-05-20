@@ -43,10 +43,10 @@ describe('Quick Quote DHL', () => {
         await qQD.destinationPostalCodeSelect.click();
 
         await qQD.whatyouSendSelect.selectByIndex(1);
-        await qQD.lengthDimensions.setValue(14);
-        await qQD.widthDimensions.setValue(14);
-        await qQD.heightDimensions.setValue(14);
-        await qQD.weightDimensions.setValue(14);
+        await qQD.lengthDimensions.setValue(12);
+        await qQD.widthDimensions.setValue(6);
+        await qQD.heightDimensions.setValue(10);
+        await qQD.weightDimensions.setValue(60);
         await qQD.getQuoteButton.click();
         await browser.pause(2000);
         // await qQD.getNewQuoteScroll.waitForDisplayed();

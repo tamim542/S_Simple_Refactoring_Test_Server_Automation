@@ -13,7 +13,7 @@ export const config: Options.Testrunner = {
             transpileOnly: true
         }
     },
-    
+
     //
     // ==================
     // Specify Test Files
@@ -30,50 +30,60 @@ export const config: Options.Testrunner = {
     // of the config file unless it's absolute.
     //
     specs: [
-      
+
 
 
 
         // './test/specs/**/Registration.ts',
         // './test/specs/**/EmailVerificationProfileSet.ts',
-        // './test/specs/**/SignIn.ts',
-        // './test/specs/**/IinnerCountry_LabelPurchase.ts',
-        // './test/specs/**/A_SingleDomesticCanadaPost.ts',
-        // './test/specs/**/A_SingleDomesticGLS.ts',
+
+        './test/specs/**/SignIn.ts',
+
+        './test/specs/**/A_SingleDomesticCanadaPost.ts',
+        './test/specs/**/A_SingleDomesticGLS.ts',
+
         // './test/specs/**/A_SingleDomesticLoomis.ts',
-        // './test/specs/**/A_SingleDomesticLoomisAPI.ts',
-        // './test/specs/**/A_SingleDomesticPurolator.ts',
-        // './test/specs/**/B_SDResidentialCanadaPost.ts',
-        // './test/specs/**/B_SDResidentialGLS.ts',
+
+        './test/specs/**/A_SingleDomesticLoomisAPI.ts',
+        './test/specs/**/A_SingleDomesticPurolator.ts',
+        './test/specs/**/B_SDResidentialCanadaPost.ts',
+        './test/specs/**/B_SDResidentialGLS.ts',
+
         // './test/specs/**/B_SDResidentialLoomis.ts',
-        // './test/specs/**/B_SDResidentialLoomisAPI.ts',
-        // './test/specs/**/B_SDResidentialPurolator.ts',
-        // './test/specs/**/C_SDInsuranceCanadaPost.ts',
-        // './test/specs/**/C_SDInsuranceGLS.ts',
+
+        './test/specs/**/B_SDResidentialLoomisAPI.ts',
+        './test/specs/**/B_SDResidentialPurolator.ts',
+        './test/specs/**/C_SDInsuranceCanadaPost.ts',
+        './test/specs/**/C_SDInsuranceGLS.ts',
+
         // './test/specs/**/C_SDInsuranceLoomis.ts',
-        // './test/specs/**/C_SDInsuranceLoomisAPI.ts',
-        // './test/specs/**/C_SDInsurancePurolator.ts',
-        // './test/specs/**/D_SDSignatureCanadaPost.ts',
-        // './test/specs/**/D_SDSignatureGLS.ts',
+
+        './test/specs/**/C_SDInsuranceLoomisAPI.ts',
+        './test/specs/**/C_SDInsurancePurolator.ts',
+        './test/specs/**/D_SDSignatureCanadaPost.ts',
+        './test/specs/**/D_SDSignatureGLS.ts',
 
         // './test/specs/**/D_SDSignatureLoomis.ts',
 
-        // './test/specs/**/D_SDSignatureLoomisAPI.ts',
-        // './test/specs/**/D_SDSignaturePurolator.ts',
-        // './test/specs/**/E_MPDomesticCanadaPost.ts',
-        // './test/specs/**/E_MPDomesticGLS.ts',
+        './test/specs/**/D_SDSignatureLoomisAPI.ts',
+        './test/specs/**/D_SDSignaturePurolator.ts',
+        './test/specs/**/E_MPDomesticCanadaPost.ts',
+        './test/specs/**/E_MPDomesticGLS.ts',
 
         // './test/specs/**/E_MPDomesticLoomis.ts',
 
-        // './test/specs/**/E_MPDomesticLoomisAPI.ts',
-        // './test/specs/**/E_MPDomesticPurolator.ts',
-        //  './test/specs/**/F_InternationalSingleParcel.ts',
-        //  './test/specs/**/F_InternationalSingleDocument.ts',
-        //  './test/specs/**/F_InternationalInsuranceDefault.ts',
+        './test/specs/**/E_MPDomesticLoomisAPI.ts',
+        './test/specs/**/E_MPDomesticPurolator.ts',
+        './test/specs/**/F_InternationalSingleParcel.ts',
+        './test/specs/**/F_InternationalSingleDocument.ts',
+        './test/specs/**/F_InternationalInsuranceDefault.ts',
+
         // './test/specs/**/F_InternationalMultiPackage.ts',
-        //   './test/specs/**/G_QuickQuoteDomestic1.ts',
-        //  './test/specs/**/G_QuickQuoteDomestic2.ts',
-         './test/specs/**/G_QuickQuoteDHL.ts',
+
+        './test/specs/**/G_QuickQuoteDomestic1.ts',
+        './test/specs/**/G_QuickQuoteDomestic2.ts',
+        './test/specs/**/G_QuickQuoteDHL.ts',
+
         //   './test/specs/**/H_PickUpDropCanadaPost.ts',
         //   './test/specs/**/H_PickUpDropGLS.ts',
         //   './test/specs/**/H_PickUpDropLoomis.ts',
@@ -159,9 +169,9 @@ export const config: Options.Testrunner = {
     //
     capabilities: [{
         browserName: 'chrome'
-    // }, {
+        // }, {
         // browserName: 'firefox'
-    // }, {
+        // }, {
         // browserName: 'MicrosoftEdge'
     }],
 
@@ -221,7 +231,7 @@ export const config: Options.Testrunner = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -235,7 +245,7 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [['allure', {outputDir: 'allure-results'}]],
+    reporters: [['allure', { outputDir: 'allure-results' }]],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -338,7 +348,7 @@ export const config: Options.Testrunner = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         if (!passed) {
             await browser.takeScreenshot();
         }

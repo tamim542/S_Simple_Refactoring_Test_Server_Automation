@@ -94,7 +94,7 @@ describe('International Single Parcel', () => {
         await iSP.DHLCLick.waitForExist();
         await iSP.DHLCLick.click();
         await iSP.DHLNextButton.click();
-        await browser.pause(7000);
+        await browser.pause(3000);
 
 
 
