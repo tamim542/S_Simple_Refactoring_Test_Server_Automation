@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//input[@name='parcels.3.length'])[1]"
-}

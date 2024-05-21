@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//button[@class=\"Button_primary_button__psbZE Button_btn__zvUAT Button_btn__zvUAT\"])[2]"
-}

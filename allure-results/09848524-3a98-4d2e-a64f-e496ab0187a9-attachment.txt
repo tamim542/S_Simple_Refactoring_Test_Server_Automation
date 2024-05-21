@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//span[@class=\"flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2\"])[3]"
-}

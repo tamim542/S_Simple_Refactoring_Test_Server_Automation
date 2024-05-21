@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//input[@placeholder=\"HS/Commodity Code\"])[4]"
-}

@@ -53,7 +53,7 @@ describe('Purolator Courier Label Purchase Single Domestic', () => {
 
         
 
-        await browser.pause(7000);
+        await browser.pause(2000);
 
 
     })

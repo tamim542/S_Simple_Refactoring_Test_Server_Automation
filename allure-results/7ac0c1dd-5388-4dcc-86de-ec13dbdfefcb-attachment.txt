@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//span[@class=\"text-md font-bold\"])[2]"
-}

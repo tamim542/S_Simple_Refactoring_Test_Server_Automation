@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//select[@name='parcels.0.weight_unit'])[1]"
-}

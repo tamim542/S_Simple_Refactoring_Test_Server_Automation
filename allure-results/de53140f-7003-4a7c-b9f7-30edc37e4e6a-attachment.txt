@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[contains(text(),'Get A New Quote')]\"}\n  (Session info: chrome=124.0.6367.203)",
-  "stacktrace": "\tGetHandleVerifier [0x00007FF6682F1502+60802]\n\t(No symbol) [0x00007FF66826AC02]\n\t(No symbol) [0x00007FF668127CE4]\n\t(No symbol) [0x00007FF668176D4D]\n\t(No symbol) [0x00007FF668176E1C]\n\t(No symbol) [0x00007FF6681BCE37]\n\t(No symbol) [0x00007FF66819ABBF]\n\t(No symbol) [0x00007FF6681BA224]\n\t(No symbol) [0x00007FF66819A923]\n\t(No symbol) [0x00007FF668168FEC]\n\t(No symbol) [0x00007FF668169C21]\n\tGetHandleVerifier [0x00007FF6685F411D+3217821]\n\tGetHandleVerifier [0x00007FF6686360B7+3488055]\n\tGetHandleVerifier [0x00007FF66862F03F+3459263]\n\tGetHandleVerifier [0x00007FF6683AB846+823494]\n\t(No symbol) [0x00007FF668275F9F]\n\t(No symbol) [0x00007FF668270EC4]\n\t(No symbol) [0x00007FF668271052]\n\t(No symbol) [0x00007FF6682618A4]\n\tBaseThreadInitThunk [0x00007FFCA7E87344+20]\n\tRtlUserThreadStart [0x00007FFCA9A026B1+33]\n"
-}

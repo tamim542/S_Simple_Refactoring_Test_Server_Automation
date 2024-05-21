@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//label[@class='RateTable_container__xEYk7 ml-6 mr-[-20px]'])[1]"
-}

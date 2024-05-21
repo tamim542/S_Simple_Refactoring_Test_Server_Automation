@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//p[@class='text-lg mt-2 font-bold'])[1]"
-}

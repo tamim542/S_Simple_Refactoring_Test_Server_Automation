@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//select[@id='what_sending_qq']"
-}

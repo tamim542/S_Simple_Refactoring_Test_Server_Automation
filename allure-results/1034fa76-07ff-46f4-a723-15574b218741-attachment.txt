@@ -1,3 +1,0 @@
-{
-  "text": "101-182 Glenwood Cres"
-}

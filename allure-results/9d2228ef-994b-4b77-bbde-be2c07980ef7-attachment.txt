@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "(//span[@class=\"Table_checkmark__nJ9HK\"])[1]"
-}

@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//button[@class=\"ReactFlagsSelect-module_selectBtn__19wW7\"]"
-}

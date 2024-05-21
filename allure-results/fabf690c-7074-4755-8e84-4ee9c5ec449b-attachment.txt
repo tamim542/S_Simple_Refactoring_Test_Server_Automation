@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//body/div[@id='__next']/div[3]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/*[1]"
-}
