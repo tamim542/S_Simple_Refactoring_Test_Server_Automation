@@ -112,11 +112,6 @@ describe('Quick Quote Domestic shipment Two', () => {
         await browser.takeScreenshot();
         await browser.pause(2000);
 
-       
-        
-
-
-
 
     })
 

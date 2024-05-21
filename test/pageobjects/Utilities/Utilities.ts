@@ -395,7 +395,7 @@ class Utilities {
 
 
         await dAISD.selectCountryDestination.selectByIndex(2);
-        await dAISD.clickSelectStreetDestination.setValue("14761 Franklin Ave");
+        await dAISD.clickSelectStreetDestination.setValue("14312 Franklin Ave Ste A"); //14761 Franklin Ave Ste A
         await browser.pause(7000);
 
         await dAISD.selectStreetDestination.click();

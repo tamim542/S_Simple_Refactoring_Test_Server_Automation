@@ -49,7 +49,7 @@ describe('Purolator Domestic Shipment Residential', () => {
 
 
         await utilities.LetsBuildYourShipment();
-        await browser.pause(7000);
+        await browser.pause(2000);
 
 
     })

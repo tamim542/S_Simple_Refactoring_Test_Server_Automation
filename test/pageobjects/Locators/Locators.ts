@@ -509,7 +509,7 @@ get ConfirmSignup(){
   }
 
   get nextButtonForShip() {
-    return $('(//span[@class="flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2"])[3]');
+    return $('//span[@class="flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2"]');
   }
   get nextButtonForShipConfirm() {
     return $('(//span[@class="text-md font-bold"])[2]');
@@ -534,7 +534,7 @@ get ConfirmSignup(){
     return $('(//span[@class="RateTable_checkmark__T6kfB dhl_api"])[1]');
   }
   get DHLNextButton() {
-    return $('(//span[@class="flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2"])[4]');
+    return $('(//span[@class="flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2"])[2]');
   }
 
 
@@ -750,7 +750,7 @@ get loomisnewPU() {
   //-----------------------------  Quick Quote   ----------------------------------------
 
   get quickQuoteClick(){
-    return $("//span[contains(text(),'Quick Quote')]");
+    return $("//p[contains(text(),'Quick Quote')]");
   }
 
   
@@ -790,7 +790,7 @@ get loomisnewPU() {
     return $("//input[@id='weight_qq']");
   }
   get getQuoteButton() {
-    return $("(//span[@class='flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2'])[3]");
+    return $("//span[@class='flex items-center transition-all duration-200 rounded-md text-sm px-4 py-2']");
   }
   
   get cheapRatecourierForQuickQuote() {

@@ -172,17 +172,17 @@ describe('Quick Quote Domestic Shipment One', () => {
         let tdClassValue = await td1.getAttribute('class');
         console.log("\n tdClassValue======================",tdClassValue);
 
-        if(tdClassValue='loomis_api'){
+        if(tdClassValue=='loomis_api'){
              loomis1 = 'Loomis';
              console.log("\n loomis1======================",loomis1);
 
 
         }
-        else if(tdClassValue='gls'){
+        else if(tdClassValue=='gls'){
              gls1 = 'GLS';
 
         }
-        else if(tdClassValue='canadapost_cp'){
+        else if(tdClassValue=='canadapost_cp'){
              canadaPost = 'Canada Post CP';
 
         }else{
