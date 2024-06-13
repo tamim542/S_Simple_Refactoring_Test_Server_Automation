@@ -28,6 +28,7 @@ describe('Quick Quote Domestic shipment Two', () => {
     it('Quick Quote for Domestic shipment two', async () => {
 
         await qQL.quickQuoteClick.click();
+        await browser.takeScreenshot();
         await browser.pause(3000);
 
 
@@ -52,6 +53,7 @@ describe('Quick Quote Domestic shipment Two', () => {
         await qQL.widthDimensions.setValue(8);
         await qQL.heightDimensions.setValue(5);
         await qQL.weightDimensions.setValue(13);
+        await browser.takeScreenshot();
         await qQL.getQuoteButton.click();
         await browser.pause(2000);
         // await qQL.getNewQuoteScroll.waitForDisplayed();

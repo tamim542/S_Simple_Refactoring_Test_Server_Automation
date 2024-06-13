@@ -117,7 +117,7 @@ describe('Quick Quote Domestic Shipment One', () => {
         await browser.takeScreenshot();
         await browser.pause(2000);
 
-        
+        await utilities.SuggestEnterAddress();
 
 
     })
@@ -141,6 +141,7 @@ describe('Quick Quote Domestic Shipment One', () => {
         await qQP.donetButtonDestination.click();
         await browser.pause(2000);
 
+        // await utilities.SuggestEnterAddress();
 
 
     })

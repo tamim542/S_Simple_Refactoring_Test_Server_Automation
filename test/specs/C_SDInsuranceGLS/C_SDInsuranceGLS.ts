@@ -58,7 +58,7 @@ describe('GLS Single Domestic Insurance', () => {
         // await browser.pause(7000);
 
         await sDIG.seeMoreCourierButton.waitForExist();
-        if (expect(sDIG.seeMoreCourierButton).toHaveValueContaining('Load More')) {
+        if (expect(sDIG.seeMoreCourierButton).toHaveValueContaining('View More')) {
 
             await sDIG.seeMoreCourierButton.click();
 

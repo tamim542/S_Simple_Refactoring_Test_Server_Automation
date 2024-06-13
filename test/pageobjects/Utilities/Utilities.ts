@@ -43,9 +43,9 @@ class Utilities {
 
         const SEA = new LabelPurchaseByAllCourierUtilities();
 
-        if (expect(SEA.enterAddressClickForDHL).toHaveValueContaining('Use Entered Address')) {
+        if (expect(SEA.useSuggestAddress).toHaveValueContaining('Use Suggested Address')) {
 
-            await SEA.enterAddressClickForDHL.click();
+            await SEA.useSuggestAddress.click();
 
         }
     }
@@ -94,7 +94,7 @@ class Utilities {
 
 
         await desti.selectCountryDestination.selectByIndex(1);
-        await desti.clickSelectStreetDestination.setValue("100-525 Fafard Ave"); //4 Brant Rd
+        await desti.clickSelectStreetDestination.setValue("22 Manitoba Dr"); //4 Brant Rd /100-525 Fafard Ave /PO Box 23001 Rpo Elmwood
         await desti.selectStreetDestination.click();
 
         await browser.pause(3000);
@@ -335,28 +335,33 @@ class Utilities {
         await lBYS.heightPercel1.setValue("10");
         await lBYS.weightPercel1.setValue("11");
         await lBYS.addPercel1.click();
+        await browser.takeScreenshot();
 
         await lBYS.lengthPercel2.setValue("12");
         await lBYS.widthPercel2.setValue("6");
         await lBYS.heightPercel2.setValue("10");
         await lBYS.weightPercel2.setValue("11");
         await lBYS.addPercel1.click();
+        await browser.takeScreenshot();
 
         await lBYS.lengthPercel3.setValue("12");
         await lBYS.widthPercel3.setValue("6");
         await lBYS.heightPercel3.setValue("10");
         await lBYS.weightPercel3.setValue("11");
         await lBYS.addPercel1.click();
+        await browser.takeScreenshot();
 
         await lBYS.lengthPercel4.setValue("12");
         await lBYS.widthPercel4.setValue("6");
         await lBYS.heightPercel4.setValue("10");
         await lBYS.weightPercel4.setValue("11");
         await browser.pause(2000);
+        await browser.takeScreenshot();
 
 
         await lBYS.nextButtonBuilderShipment.click();
-        await browser.pause(7000);
+        await browser.takeScreenshot();
+        await browser.pause(2000);
     }
 
 
@@ -473,44 +478,44 @@ class Utilities {
         await browser.pause(2000);
         await lBYS.HSCode2.click();
         await lBYS.HSCode2.setValue("220");
-        await lBYS.addPercel2.click();
+        // await lBYS.addPercel2.click();
 
 
 
-        await lBYS.lengthPercel3.setValue("12");
-        await lBYS.widthPercel3.setValue("6");
-        await lBYS.heightPercel3.setValue("10");
-        await lBYS.weightPercel3.setValue("4");
-        await lBYS.addPercel3.click();
+        // await lBYS.lengthPercel3.setValue("12");
+        // await lBYS.widthPercel3.setValue("6");
+        // await lBYS.heightPercel3.setValue("10");
+        // await lBYS.weightPercel3.setValue("4");
+        // await lBYS.addPercel3.click();
 
-        await lBYS.quantity3.setValue("2");
-        await lBYS.selectPackage3.selectByIndex(3);
-        await lBYS.itemDescription3.setValue("For Testing Purpose");
-        await lBYS.weightItem3.setValue("2");
-        await lBYS.valueItem3.setValue("30");
-        await lBYS.countryForMade3.click();
-        await lBYS.clickCountry3.click();
-        await browser.pause(2000);
-        await lBYS.HSCode3.click();
-        await lBYS.HSCode3.setValue("220");
-
-
-
-        await lBYS.lengthPercel4.setValue("2");
-        await lBYS.widthPercel4.setValue("6");
-        await lBYS.heightPercel4.setValue("4");
-        await lBYS.weightPercel4.setValue("9");
-
-        await lBYS.quantity4.setValue("3");
-        await lBYS.selectPackage4.selectByIndex(3);
-        await lBYS.itemDescription4.setValue("For Testing Purpose");
-        await lBYS.weightItem4.setValue("3");
-        await lBYS.valueItem4.setValue("30");
-        await lBYS.countryForMade4.click();
-        await lBYS.clickCountry4.click();
+        // await lBYS.quantity3.setValue("2");
+        // await lBYS.selectPackage3.selectByIndex(3);
+        // await lBYS.itemDescription3.setValue("For Testing Purpose");
+        // await lBYS.weightItem3.setValue("2");
+        // await lBYS.valueItem3.setValue("30");
+        // await lBYS.countryForMade3.click();
+        // await lBYS.clickCountry3.click();
         // await browser.pause(2000);
-        await lBYS.HSCode4.click();
-        await lBYS.HSCode4.setValue("220");
+        // await lBYS.HSCode3.click();
+        // await lBYS.HSCode3.setValue("220");
+
+
+
+        // await lBYS.lengthPercel4.setValue("2");
+        // await lBYS.widthPercel4.setValue("6");
+        // await lBYS.heightPercel4.setValue("4");
+        // await lBYS.weightPercel4.setValue("9");
+
+        // await lBYS.quantity4.setValue("3");
+        // await lBYS.selectPackage4.selectByIndex(3);
+        // await lBYS.itemDescription4.setValue("For Testing Purpose");
+        // await lBYS.weightItem4.setValue("3");
+        // await lBYS.valueItem4.setValue("30");
+        // await lBYS.countryForMade4.click();
+        // await lBYS.clickCountry4.click();
+       
+        // await lBYS.HSCode4.click();
+        // await lBYS.HSCode4.setValue("220");
 
         await lBYS.shipmentProtection.click();
 

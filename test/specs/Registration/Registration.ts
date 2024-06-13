@@ -1,5 +1,5 @@
 import Registration from '../../pageobjects/Locators/Locators.js';
-import LabelPurchaseCanadaPostCourier from '../../pageobjects/Locators/Locators.js';
+// import LabelPurchaseCanadaPostCourier from '../../pageobjects/Locators/Locators.js';
 import Utilities from '../../pageobjects/Utilities/Utilities.js';
 describe('Registration field fill up', () => {
    

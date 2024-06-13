@@ -27,7 +27,7 @@ get hearwhere(){
   return $("//select[@id='how_hear']");
 }
 get signupButton(){
-  return $('//button[@class="text-white bg-blue-700 border border-transparent hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dark:disabled:hover:bg-blue-600 focus:!ring-2 group flex h-min items-center justify-center p-0.5 text-center font-medium focus:z-10 rounded-lg util_greenButton__aT5NB w-full"]');
+  return $('//span[@class="text-red-500 font-bold text-xs ml-1 flex-1"]');
 } ////span[contains(text(),'Sign Up Now')]
 get ConfirmSignup(){
   return $("//p[contains(text(),'Check your email to verify your account')]");
@@ -339,8 +339,8 @@ get ConfirmSignup(){
 
   //-----------------------  suggested address   ----------------------
 
-  get enterAddressClickForDHL() {
-    return $("//span[contains(text(),'Use Entered Address')]"); 
+  get useSuggestAddress() {
+    return $("//span[contains(text(),'Use Suggested Address')]"); 
   }
 
   get suggestedAddressClickForDHL() {

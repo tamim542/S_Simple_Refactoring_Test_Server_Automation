@@ -1,6 +1,6 @@
 import type { Options } from '@wdio/types'
 export const config: Options.Testrunner = {
-    
+
     runner: 'local',
     autoCompileOpts: {
         autoCompile: true,
@@ -10,7 +10,7 @@ export const config: Options.Testrunner = {
         }
     },
 
-   
+
     specs: [
 
 
@@ -19,54 +19,55 @@ export const config: Options.Testrunner = {
         // './test/specs/**/Registration.ts',
         // './test/specs/**/EmailVerificationProfileSet.ts',
 
-        // './test/specs/**/SignIn.ts',
+        './test/specs/**/SignIn.ts',
 
-        // './test/specs/**/A_SingleDomesticCanadaPost.ts',
-        // './test/specs/**/A_SingleDomesticGLS.ts',
+        './test/specs/**/A_SingleDomesticCanadaPost.ts',
+        './test/specs/**/A_SingleDomesticGLS.ts',
 
-        // './test/specs/**/A_SingleDomesticLoomis.ts',
 
-        // './test/specs/**/A_SingleDomesticLoomisAPI.ts',
-        // './test/specs/**/A_SingleDomesticPurolator.ts',
-        // './test/specs/**/B_SDResidentialCanadaPost.ts',
-        // './test/specs/**/B_SDResidentialGLS.ts',
 
-        // './test/specs/**/B_SDResidentialLoomis.ts',
+        './test/specs/**/A_SingleDomesticLoomisAPI.ts',
+        './test/specs/**/A_SingleDomesticPurolator.ts',
+        './test/specs/**/B_SDResidentialCanadaPost.ts',
+        './test/specs/**/B_SDResidentialGLS.ts',
 
-        // './test/specs/**/B_SDResidentialLoomisAPI.ts',
+
+
+        './test/specs/**/B_SDResidentialLoomisAPI.ts',
         './test/specs/**/B_SDResidentialPurolator.ts',
-        // './test/specs/**/C_SDInsuranceCanadaPost.ts',
-        // './test/specs/**/C_SDInsuranceGLS.ts',
+        './test/specs/**/C_SDInsuranceCanadaPost.ts',
+        './test/specs/**/C_SDInsuranceGLS.ts',
 
-        // './test/specs/**/C_SDInsuranceLoomis.ts',
 
-        // './test/specs/**/C_SDInsuranceLoomisAPI.ts',
-        // './test/specs/**/C_SDInsurancePurolator.ts',
-        // './test/specs/**/D_SDSignatureCanadaPost.ts',
-        // './test/specs/**/D_SDSignatureGLS.ts',
 
-        // './test/specs/**/D_SDSignatureLoomis.ts',
+        './test/specs/**/C_SDInsuranceLoomisAPI.ts',
+        './test/specs/**/C_SDInsurancePurolator.ts',
 
-        // './test/specs/**/D_SDSignatureLoomisAPI.ts',
-        // './test/specs/**/D_SDSignaturePurolator.ts',
+        './test/specs/**/D_SDSignatureCanadaPost.ts',
+        './test/specs/**/D_SDSignatureGLS.ts',
+        './test/specs/**/D_SDSignatureLoomisAPI.ts',
+        './test/specs/**/D_SDSignaturePurolator.ts',
 
-        // './test/specs/**/E_MPDomesticCanadaPost.ts',
 
-        // './test/specs/**/E_MPDomesticGLS.ts',
 
-        // './test/specs/**/E_MPDomesticLoomis.ts',
+        './test/specs/**/E_MPDomesticGLS.ts',
 
-        // './test/specs/**/E_MPDomesticLoomisAPI.ts',
-        // './test/specs/**/E_MPDomesticPurolator.ts',
-        // './test/specs/**/F_InternationalSingleParcel.ts',
-        // './test/specs/**/F_InternationalSingleDocument.ts',
-        // './test/specs/**/F_InternationalInsuranceDefault.ts',
+       
 
-        // './test/specs/**/F_InternationalMultiPackage.ts',
+        './test/specs/**/E_MPDomesticLoomisAPI.ts',
+        './test/specs/**/E_MPDomesticPurolator.ts',
+        './test/specs/**/F_InternationalSingleParcel.ts',
+        './test/specs/**/F_InternationalSingleDocument.ts',
+        './test/specs/**/F_InternationalInsuranceDefault.ts',
+        './test/specs/**/F_InternationalMultiPackage.ts',
 
-        // './test/specs/**/G_QuickQuoteDomestic1.ts',
-        // './test/specs/**/G_QuickQuoteDomestic2.ts',
-        // './test/specs/**/G_QuickQuoteDHL.ts',
+       
+
+        './test/specs/**/G_QuickQuoteDomestic1.ts',
+        './test/specs/**/G_QuickQuoteDomestic2.ts',
+        './test/specs/**/G_QuickQuoteDHL.ts',
+
+        //---------------------------------------------------------------------------------
 
         //   './test/specs/**/H_PickUpDropCanadaPost.ts',
         //   './test/specs/**/H_PickUpDropGLS.ts',
@@ -79,6 +80,16 @@ export const config: Options.Testrunner = {
         // './test/specs/**/TrackandManage.ts',
         // './test/specs/**/SigninNegative.ts',
 
+        //------------------------ Abandone file--------------------------
+
+        // './test/specs/**/A_SingleDomesticLoomis.ts',
+        // './test/specs/**/B_SDResidentialLoomis.ts',
+        // './test/specs/**/C_SDInsuranceLoomis.ts',
+        // './test/specs/**/D_SDSignatureLoomis.ts',
+        // './test/specs/**/E_MPDomesticCanadaPost.ts',
+         // './test/specs/**/E_MPDomesticLoomis.ts',
+
+         
 
         //--------------------------For Mobile screen file -------------------------
 
@@ -125,7 +136,7 @@ export const config: Options.Testrunner = {
 
 
     ],
-    
+
     exclude: [
         // 'path/to/excluded/files'
     ],
@@ -133,9 +144,9 @@ export const config: Options.Testrunner = {
     // ============
     // Capabilities
     // ============
-  
+
     maxInstances: 1,
-  
+
     capabilities: [{
         browserName: 'chrome'
         // }, {
@@ -144,16 +155,16 @@ export const config: Options.Testrunner = {
         // browserName: 'MicrosoftEdge'
     }],
 
-   
+
     // ===================
     // Test Configurations
     // ===================
-   
+
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'error',
-   
+
     bail: 0,
-   
+
     // baseUrl: 'http://localhost:8080',
     //
     // Default timeout for all waitFor* commands.
@@ -165,16 +176,16 @@ export const config: Options.Testrunner = {
     //
     // Default request retries count
     connectionRetryCount: 3,
-   
+
     services: ['chromedriver'],
 
-    
+
     // see also: https://webdriver.io/docs/frameworks
-   
-    
+
+
     framework: 'mocha',
 
-   
+
     // see also: https://webdriver.io/docs/dot-reporter
 
     // reporters: [['allure', { outputDir: 'allure-results' }]],
@@ -184,7 +195,7 @@ export const config: Options.Testrunner = {
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
     }]],
-    
+
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
@@ -195,7 +206,7 @@ export const config: Options.Testrunner = {
     // =====
     // Hooks
     // =====
-   
+
     /**
      * Gets executed once before all workers get launched.
      * @param {object} config wdio configuration object
@@ -288,5 +299,5 @@ export const config: Options.Testrunner = {
     
     * @param {object} params information about the assertion that was executed, including its results
     */
-    
+
 }

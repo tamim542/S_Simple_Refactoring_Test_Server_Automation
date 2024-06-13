@@ -72,7 +72,8 @@ describe('GLS Multi-Package Domestic', () => {
 
             // await mPDG.GLSScrollAction.scrollIntoView();
             await mPDG.GLS.click();
-            await browser.pause(7000);
+            await browser.takeScreenshot();
+            await browser.pause(5000);
             await mPDG.courierButtonNextAllCourier.click();
         }else {
             console.log("\n=======================================================================================\n");
